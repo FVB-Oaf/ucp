@@ -1,0 +1,36 @@
+{
+    "UCP_Autobello_OldTailLight_R":{
+        "information":{"authors":"Oaf","name":"Vintage Right Tail Light (UCP)","value":100},
+        "slotType":"autobello_taillight_R",
+        "flexbodies":[
+            ["mesh","[group]:","nonFlexMaterials"],
+            ["UCP_Autobello_OldTailLightHousing_R",["taillight_R"]],
+            {"deformGroup":"taillight_R_break","deformMaterialBase":"autobello_lights","deformMaterialDamaged":"autobello_lights_dmg"},
+            ["UCP_Autobello_OldTailLight_R",["taillight_R"],[],{"deformSound":"event:>Destruction>Vehicle>Glass>extglassbreaksound1","deformVolume":0.5}],
+            {"deformGroup":""}
+        ],
+        "props":[
+            ["func","mesh","idRef:","idX:","idY:","baseRotation","rotation","translation","min","max","offset","multiplier"],
+            {"lightInnerAngle":0,"lightOuterAngle":120,"lightRange":8,"lightColor":{"r":255,"g":50,"b":0,"a":255},"lightAttenuation":{"x":0,"y":1,"z":1},"lightCastShadows":false,"flareName":"vehicleBrakeLightFlare"},
+            ["lowhighbeam","SPOTLIGHT","bf11r","bf9r","bf13r",{"x":-5,"y":0,"z":-145},{"x":0,"y":0,"z":0},{"x":0,"y":0,"z":0},0,0,0,1,{"baseTranslation":{"x":0.88,"y":0,"z":-0.047},"flareScale":0.05,"lightBrightness":0.03,"deformGroup":"taillight_R_break"}],
+            ["brake","SPOTLIGHT","bf11r","bf9r","bf13r",{"x":-5,"y":0,"z":-145},{"x":0,"y":0,"z":0},{"x":0,"y":0,"z":0},0,0,0,1,{"baseTranslation":{"x":0.88,"y":0,"z":-0.047},"flareScale":0.05,"lightBrightness":0.03,"deformGroup":"taillight_R_break"}]
+        ]
+    },
+    "UCP_Autobello_OldTailLight_L":{
+        "information":{"authors":"Oaf","name":"Vingate Left Taillight (UCP)","value":100},
+        "slotType":"autobello_taillight_L",
+        "flexbodies":[
+            ["mesh","[group]:","nonFlexMaterials"],
+            ["UCP_Autobello_OldTailLightHousing_L",["taillight_L"]],
+            {"deformGroup":"taillight_L_break","deformMaterialBase":"autobello_lights","deformMaterialDamaged":"autobello_lights_dmg"},
+            ["UCP_Autobello_OldTailLight_L",["taillight_L"],[],{"deformSound":"event:>Destruction>Vehicle>Glass>extglassbreaksound2","deformVolume":0.5}],
+            {"deformGroup":""}
+        ],
+        "props":[
+            ["func","mesh","idRef:","idX:","idY:","baseRotation","rotation","translation","min","max","offset","multiplier"],
+            {"lightInnerAngle":0,"lightOuterAngle":120,"lightRange":8,"lightColor":{"r":255,"g":50,"b":0,"a":255},"lightAttenuation":{"x":0,"y":1,"z":1},"lightCastShadows":false,"flareName":"vehicleBrakeLightFlare"},
+            ["lowhighbeam","SPOTLIGHT","bf11l","bf9l","bf13l",{"x":-5,"y":0,"z":-35},{"x":0,"y":0,"z":0},{"x":0,"y":0,"z":0},0,0,0,1,{"baseTranslation":{"x":0.88,"y":0,"z":0.047},"flareScale":0.05,"lightBrightness":0.03,"deformGroup":"taillight_L_break"}],
+            ["brake","SPOTLIGHT","bf11l","bf9l","bf13l",{"x":-5,"y":0,"z":-35},{"x":0,"y":0,"z":0},{"x":0,"y":0,"z":0},0,0,0,1,{"baseTranslation":{"x":0.88,"y":0,"z":0.047},"flareScale":0.05,"lightBrightness":0.03,"deformGroup":"taillight_L_break"}]
+        ]
+    }
+}

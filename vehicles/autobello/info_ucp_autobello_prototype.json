@@ -1,0 +1,25 @@
+{
+  "Config Type":"Factory",
+  "Configuration":"Prototype (M)",
+  "Description":"Prototype model with 800cc I2 engine",
+  "Drag Times":{
+    "brakingG":0.9542458541,
+    "time_0_60":20.55350145,
+    "time_1000":17.55200124,
+    "time_1_4":21.2660015,
+    "time_1_8":13.22000092,
+    "time_330":8.335500579,
+    "time_60":2.674500172,
+    "velAt_1_4":27.14304773,
+    "velAt_1_8":22.42583903
+  },
+  "Drivetrain":"RWD",
+  "Fuel Type":"Gasoline",
+  "Induction Type":"NA",
+  "Propulsion":"ICE",
+  "Transmission":"Manual",
+  "Years":{
+    "max":1954,
+    "min":1954
+  }
+}
