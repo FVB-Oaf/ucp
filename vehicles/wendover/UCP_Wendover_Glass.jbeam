@@ -1,0 +1,162 @@
+{
+    "UCP_Wendover_WindshieldHub":{
+        "information":{"authors":"Oaf","name":"Windshield (UCP)","value":0},
+        "slotType":"wendover_windshield",
+        "slots":[
+            ["type","default","description"],
+            ["UCP_Wendover_WindshieldGlass","UCP_Wendover_WindshieldGlass","Windshield Glass"],
+            ["UCP_Wendover_RearViewMirror","UCP_Wendover_RearViewMirror","Rear-View Mirror"],
+            ["UCP_Wendover_Wiper_L","UCP_Wendover_Wiper_L","Left Wiper"],
+            ["UCP_Wendover_Wiper_R","UCP_Wendover_Wiper_R","Right Wiper"]
+        ]
+    },
+    "UCP_Wendover_RearViewMirror":{
+        "information":{"authors":"Oaf","name":"Rear-View Mirror (UCP)","value":25},
+        "slotType":"UCP_Wendover_RearViewMirror",
+        "flexbodies":[["mesh","[group]:","nonFlexMaterials"],["wendover_mirror_interior",["wendover_windshield"]]],
+        "mirrors":[["mesh","idRef:","id1:","id2:"],["wendover_mirror_interior","rf1","rf1r","rf2",{"refBaseTranslation":{"x":0.01,"y":-0.05,"z":-0.09},"baseRotationGlobal":{"x":5,"y":0,"z":15}}]]
+    },
+    "UCP_Wendover_Wiper_L":{
+        "information":{"authors":"Oaf","name":"Left Wiper (UCP)","value":25},
+        "slotType":"UCP_Wendover_Wiper_L",
+        "flexbodies":[["mesh","[group]:","nonFlexMaterials"],["UCP_Wendover_Wiper_L",["wendover_body"]]]
+    },
+    "UCP_Wendover_Wiper_R":{
+        "information":{"authors":"Oaf","name":"Right Wiper (UCP)","value":25},
+        "slotType":"UCP_Wendover_Wiper_R",
+        "flexbodies":[["mesh","[group]:","nonFlexMaterials"],["UCP_Wendover_Wiper_R",["wendover_body"]]]
+    },
+    "UCP_Wendover_WindshieldGlass": {
+        "information":{"authors":"Oaf","name":"Windshield Glass (UCP)","value":225},
+        "slotType":"UCP_Wendover_WindshieldGlass",
+        "flexbodies":[
+            ["mesh","[group]:","nonFlexMaterials"],
+            {"deformGroup":"windshield_break","deformMaterialBase":"wendover_glass","deformMaterialDamaged":"wendover_windshield_dmg"},
+            ["wendover_windshield",["wendover_windshield"],[],{"deformSound":"event:>Destruction>Vehicle>Glass>impact_glass_windscreen_01","deformVolume":0.7}],
+            {"deformGroup":"windshield_break","deformMaterialBase":"wendover_glass_int","deformMaterialDamaged":"wendover_glass_int"},
+            ["wendover_windshield_int",["wendover_windshield"]],
+            {"deformGroup":"windshield_break","deformMaterialBase":"glass_invisible","deformMaterialDamaged":"glass_cracks"},
+            ["wendover_windshield_dmg",["wendover_windshield"]],
+            {"deformGroup":""}
+        ],
+        "sounds":{"$+cabinFilterCoef":0.12},
+        "nodes":[
+            ["id","posX","posY","posZ"],
+            {"selfCollision":true,"collision":true,"frictionCoef":0.5,"nodeMaterial":"|NM_GLASS","nodeWeight":2,"group":["wendover_windshield","gps"]},
+            ["wi1",0,-0.7,1.13],
+            {"group":"","nodeMaterial":"|NM_METAL","nodeWeight":2.4},
+            ["p1r",-0.69,-0.56,1.11,{"group":["wendover_roof","gps","wendover_windshield"]}],
+            ["p1l",0.69,-0.56,1.11,{"group":["wendover_roof","gps","wendover_windshield"]}],
+            {"nodeWeight":3.3,"group":"wendover_roof"},
+            ["rf1r",-0.65,-0.22,1.3,{"group":["wendover_roof","gps","wendover_windshield","wendover_roof"]}],
+            ["rf1",0,-0.26,1.34011,{"nodeWeight":1.6,"group":["wendover_roof","gps","wendover_windshield","wendover_roof"]}],
+            ["rf1l",0.65,-0.22,1.3,{"group":["wendover_roof","gps","wendover_windshield","wendover_roof"]}],
+            {"nodeWeight":8.6,"group":["wendover_engine_bay","gps","wendover_windshield","wendover_dash","wendover_body"]},
+            ["f6rr",-0.85,-0.86,0.86],
+            ["f6r",-0.363,-1.02,0.93,{"group":["wendover_engine_bay","gps","wendover_windshield","wendover_dash","wendover_body","wendover_strutbar"]}],
+            ["f6l",0.363,-1.02,0.93,{"group":["wendover_engine_bay","gps","wendover_windshield","wendover_dash","wendover_body","wendover_strutbar"]}],
+            ["f6ll",0.85,-0.86,0.86],
+            {"group":""}
+        ],
+        "beams":[
+            ["id1:","id2:"],
+            {"beamSpring":1470600,"beamDamp":120,"beamPrecompression":1,"beamType":"|NORMAL","beamLongBound":1,"beamShortBound":1,"disableMeshBreaking":true,"disableTriangleBreaking":true,"beamDeform":5750,"beamStrength":"FLT_MAX","deformGroup":"windshield_break","deformationTriggerRatio":0.03,"deformLimitExpansion":""},
+            ["rf1","wi1"],
+            ["rf1r","wi1"],
+            ["rf1l","wi1"],
+            ["wi1","f6r"],
+            ["wi1","f6l"],
+            ["wi1","p1r"],
+            ["wi1","p1l"],
+            ["wi1","f6rr"],
+            ["wi1","f6ll"],
+            ["wi1","p2rr"],
+            ["wi1","p2ll"],
+            {"beamDeform":5750,"beamStrength":12750},
+            ["rf1","f6r"],
+            ["rf1","f6l"],
+            ["p1r","p1l"],
+            ["rf1r","f6r"],
+            ["rf1l","f6l"],
+            {"breakGroup":"","disableMeshBreaking":false,"disableTriangleBreaking":false,"deformGroup":"","deformationTriggerRatio":"","beamPrecompression":1,"beamType":"|NORMAL","beamLongBound":1,"beamShortBound":1,"deformLimitExpansion":1.1}
+        ]
+    },
+    "UCP_Wendover_WindshieldGlass_Broken": {
+        "information":{"authors":"Oaf","name":"Broken Windshield Glass (UCP)","value":23},
+        "slotType":"UCP_Wendover_WindshieldGlass",
+        "flexbodies":[
+            ["mesh","[group]:","nonFlexMaterials"],
+            ["UCP_Wendover_BrokenWindshield",["wendover_windshield"]],
+            ["UCP_Wendover_BrokenWindshield_Cracks",["wendover_windshield"]],
+            {"deformGroup":"windshield_break","deformMaterialBase":"wendover_glass_int","deformMaterialDamaged":"wendover_glass_int"},
+            ["wendover_windshield_int",["wendover_windshield"]],
+            {"deformGroup":""}
+        ],
+        "sounds":{"$+cabinFilterCoef":0.12},
+        "nodes":[
+            ["id","posX","posY","posZ"],
+            {"selfCollision":true,"collision":true,"frictionCoef":0.5,"nodeMaterial":"|NM_GLASS","nodeWeight":2,"group":["wendover_windshield","gps"]},
+            ["wi1",0,-0.7,1.13],
+            {"group":"","nodeMaterial":"|NM_METAL","nodeWeight":2.4},
+            ["p1r",-0.69,-0.56,1.11,{"group":["wendover_roof","gps","wendover_windshield"]}],
+            ["p1l",0.69,-0.56,1.11,{"group":["wendover_roof","gps","wendover_windshield"]}],
+            {"nodeWeight":3.3,"group":"wendover_roof"},
+            ["rf1r",-0.65,-0.22,1.3,{"group":["wendover_roof","gps","wendover_windshield","wendover_roof"]}],
+            ["rf1",0,-0.26,1.34011,{"nodeWeight":1.6,"group":["wendover_roof","gps","wendover_windshield","wendover_roof"]}],
+            ["rf1l",0.65,-0.22,1.3,{"group":["wendover_roof","gps","wendover_windshield","wendover_roof"]}],
+            {"nodeWeight":8.6,"group":["wendover_engine_bay","gps","wendover_windshield","wendover_dash","wendover_body"]},
+            ["f6rr",-0.85,-0.86,0.86],
+            ["f6r",-0.363,-1.02,0.93,{"group":["wendover_engine_bay","gps","wendover_windshield","wendover_dash","wendover_body","wendover_strutbar"]}],
+            ["f6l",0.363,-1.02,0.93,{"group":["wendover_engine_bay","gps","wendover_windshield","wendover_dash","wendover_body","wendover_strutbar"]}],
+            ["f6ll",0.85,-0.86,0.86],
+            {"group":""}
+        ],
+        "beams":[
+            ["id1:","id2:"],
+            {"beamSpring":1470600,"beamDamp":120,"beamPrecompression":1,"beamType":"|NORMAL","beamLongBound":1,"beamShortBound":1,"disableMeshBreaking":true,"disableTriangleBreaking":true,"beamDeform":5750,"beamStrength":"FLT_MAX","deformGroup":"windshield_break","deformationTriggerRatio":0.03,"deformLimitExpansion":""},
+            ["rf1","wi1"],
+            ["rf1r","wi1"],
+            ["rf1l","wi1"],
+            ["wi1","f6r"],
+            ["wi1","f6l"],
+            ["wi1","p1r"],
+            ["wi1","p1l"],
+            ["wi1","f6rr"],
+            ["wi1","f6ll"],
+            ["wi1","p2rr"],
+            ["wi1","p2ll"],
+            {"beamDeform":5750,"beamStrength":12750},
+            ["rf1","f6r"],
+            ["rf1","f6l"],
+            ["p1r","p1l"],
+            ["rf1r","f6r"],
+            ["rf1l","f6l"],
+            {"breakGroup":"","disableMeshBreaking":false,"disableTriangleBreaking":false,"deformGroup":"","deformationTriggerRatio":"","beamPrecompression":1,"beamType":"|NORMAL","beamLongBound":1,"beamShortBound":1,"deformLimitExpansion":1.1}
+        ]
+    },
+    "UCP_Wendover_BrokenBacklight": {
+        "information":{"authors":"Oaf","name":"Broken Backlight (UCP)","value":15},
+        "slotType":"wendover_backlight",
+        "flexbodies":[["mesh","[group]:","nonFlexMaterials"],["UCP_Wendover_BrokenBacklight",["wendover_body","wendover_roof"]]]
+    },
+    "UCP_Wendover_BrokenQuarterGlass_RR": {
+        "information":{"authors":"Oaf","name":"Broken Right Quarter Glass (UCP)","value":5},
+        "slotType":"wendover_quarterglass_R",
+        "flexbodies":[["mesh","[group]:","nonFlexMaterials"],["UCP_Wendover_BrokenQuarterGlass_RR",["wendover_body","wendover_roof"]]]
+    },
+    "UCP_Wendover_BrokenQuarterGlass_RL": {
+        "information":{"authors":"Oaf","name":"Broken Left Quarter Glass (UCP)","value":5},
+        "slotType":"wendover_quarterglass_L",
+        "flexbodies":[["mesh","[group]:","nonFlexMaterials"],["UCP_Wendover_BrokenQuarterGlass_RL",["wendover_body","wendover_roof"]]]
+    },
+    "UCP_Wendover_BrokenDoorGlass_FR": {
+        "information":{"authors":"Oaf","name":"Broken Front Right Door Glass (UCP)","value":5},
+        "slotType":"wendover_doorglass_R",
+        "flexbodies":[["mesh","[group]:","nonFlexMaterials"],["UCP_Wendover_BrokenDoorGlass_FR",["wendover_door_R"]]]
+    },
+    "UCP_Wendover_BrokenDoorGlass_FL": {
+        "information":{"authors":"Oaf","name":"Broken Front Left Door Glass (UCP)","value":5},
+        "slotType":"wendover_doorglass_L",
+        "flexbodies":[["mesh","[group]:","nonFlexMaterials"],["UCP_Wendover_BrokenDoorGlass_FL",["wendover_door_L"]]]
+    }
+}

@@ -1,0 +1,21 @@
+{
+    "UCP_Wendover_Interior_Carpeted":{
+        "information":{"authors":"Oaf","name":"Carpeted Interior (UCP)","value":900},
+        "slotType":"UCP_Wendover_Interior",
+        "slots":[
+            ["type","default","description"],
+            ["wendover_rollcage","","Roll Cage"],
+            ["wendover_seat_FL","wendover_seat_FL","Driver Seat"],
+            ["wendover_seat_FR","wendover_seat_FR","Passenger Seat"],
+            ["wendover_seats_R","wendover_seats_R","Rear Seats"],
+            ["wendover_dashboard","wendover_dashboard","Dashboard",{"coreSlot":true}],
+            ["wendover_trunk_load","","Trunk Load"],
+            ["gps","","Navigation Unit",{"nodeOffset":{"x":0.03,"y":-0.63,"z":1.03}}],
+            ["skin_interior","wendover_skin_interior_prefl","Interior Color",{"coreSlot":true}]
+        ],
+        "flexbodies":[
+            ["mesh","[group]:","nonFlexMaterials"],
+            ["UCP_Wendover_Interior",["wendover_body","wendover_roof"]]
+        ]
+    }
+}
