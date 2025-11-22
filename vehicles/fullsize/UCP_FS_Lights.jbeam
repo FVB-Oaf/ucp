@@ -1,0 +1,18 @@
+{
+    "UCP_FS_CHMSL":{
+        "information":{"authors":"Oaf","name":"Center Stop Light (UCP)","value":100},
+        "slotType":"UCP_FS_CHMSL",
+        "props":[
+            ["func","mesh","idRef:","idX:","idY:","baseRotation","rotation","translation","min","max","offset","multiplier"],
+            {"lightInnerAngle":0,"lightOuterAngle":120,"lightRange":8,"lightColor":{"r":255,"g":50,"b":0,"a":255},"lightAttenuation":{"x":0,"y":1,"z":1},"lightCastShadows":false,"flareName":"vehicleBrakeLightFlare","flareScale":0.1},
+            ["brakelight_filament" ,"SPOTLIGHT","tb1","tb1r","rf4",{"x":-140,"y":0,"z":0} ,{"x":0,"y":0,"z":0},{"x":0,"y":0,"z":0},0,0,0,1,{"baseTranslation":{"x":0,"y":0.2,"z":0.03},"flareScale":0.05,"lightBrightness":0.06,"deformGroup":"backlight_break","lightScaling":{}}]
+        ],
+        "flexbodies": [
+            ["mesh", "[group]:", "nonFlexMaterials"],
+            ["UCP_FS_CHMSLHolder", ["fullsize_body"]],
+            {"deformGroup":"backlight_break", "deformMaterialBase":"fullsize_lights", "deformMaterialDamaged":"fullsize_lights_dmg"},
+            ["fullsize_chmsl", ["fullsize_body"]],
+            {"deformGroup":""}
+        ]
+    }
+}
