@@ -1,0 +1,12 @@
+{
+    "UCP_Common_HeadGasketsBlown_Boolean0":{
+        "information":{"authors":"Oaf","name":"Head Gaskets (UCP)","value":100},
+        "slotType":"UCP_Common_HeadGasketsBlown",
+        "mainEngine":{"headGasketBlownOverride":false}
+    },
+    "UCP_Common_HeadGasketsBlown_Boolean1":{
+        "information":{"authors":"Oaf","name":"Blown Head Gaskets (UCP)","value":0},
+        "slotType":"UCP_Common_HeadGasketsBlown",
+        "mainEngine":{"headGasketBlownOverride":true}
+    }
+}
