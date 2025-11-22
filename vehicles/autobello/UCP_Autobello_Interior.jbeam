@@ -1,0 +1,374 @@
+{
+    "UCP_Autobello_InteriorGroup":{
+        "information":{"authors":"Oaf","name":"Interior (Group)","value":0},
+        "slotType":"UCP_Autobello_InteriorGroup",
+        "slots":[
+            ["type","default","description"],
+            ["autobello_sparewheel","autobello_sparewheel_11a","Spare Wheel"],
+            ["autobello_rollcage","","Roll Cage"],
+            ["autobello_seat_FL","autobello_seat_FL","Driver Seat"],
+            ["UCP_Autobello_BrakePedal","UCP_Autobello_BrakePedal","Brake Pedal"],
+            ["UCP_Autobello_GasPedal","UCP_Autobello_GasPedal","Gas Pedal"],
+            ["UCP_Autobello_TurnSignalStalk","UCP_Autobello_TurnSignalStalk","Turn Signal Stalk"],
+            ["UCP_Autobello_PBrake","UCP_Autobello_PBrake","Parking Brake"],
+            ["autobello_seat_FR","autobello_seat_FR","Passenger Seat"],
+            ["autobello_seats_R","autobello_seats_R","Rear Seats"],
+            ["autobello_interior","autobello_interior","Interior",{"coreSlot":true}],
+            ["skin_interior","autobello_skin_interior","Interior Color",{"coreSlot":true}],
+            ["skin_seats","autobello_skin_seats","Seat Color",{"coreSlot":true}],
+            ["gps","","Navigation Unit",{"nodeOffset":{"x":0,"y":-0.51,"z":0.98}}],
+            ["cargo_load_box_S_frunk","","Frunk Load",{"nodeMove":{"x":0,"y":-0.96,"z":0.72}}],
+            ["cargo_load_box_M_trunk","","Trunk Load",{"nodeMove":{"x":0,"y":1.07,"z":0.58},"variables":{"$group":"floor"}}],
+            ["UCP_Autobello_RoofPanel","UCP_Autobello_RoofPanel_Carpeted","Roof Panel",{"coreSlot":true}],
+            ["UCP_Autobello_Visor_L","UCP_Autobello_Visor_L","Left Sunvisor"],
+            ["UCP_Autobello_Visor_R","UCP_Autobello_Visor_R","Right Sunvisor"],
+            ["UCP_Autobello_DoorPanel_RL","UCP_Autobello_DoorPanel_RL_Carpeted","Left Interior Panel",{"coreSlot":true}],
+            ["UCP_Autobello_DoorPanel_RR","UCP_Autobello_DoorPanel_RR_Carpeted","Right Interior Panel",{"coreSlot":true}],
+            ["UCP_Autobello_FloorMat","UCP_Autobello_FloorMat_Rubber","Floor",{"coreSlot":true}]
+        ]
+    },
+    "UCP_Autobello_FloorMat_Rubber":{
+        "information":{"authors":"Oaf","name":"Rubber Floor (UCP)","value":5},
+        "slotType":"UCP_Autobello_FloorMat",
+        "flexbodies":[["mesh","[group]:","nonFlexMaterials"],["UCP_Autobello_RubberFloorMat",["floor"]]]
+    },
+    //DOORS
+    "UCP_Autobello_DoorPanel_FL_Carpeted":{
+        "information":{"authors":"Oaf","name":"Carpeted Left Door Panel (UCP)","value":10},
+        "slotType":"UCP_Autobello_DoorPanel_FL",
+        "flexbodies":[["mesh","[group]:","nonFlexMaterials"],["UCP_Autobello_DoorPanel_FL_Carpeted",["door_L"]]],
+        "sounds":{"$+cabinFilterCoef":0.01}
+    },
+    "UCP_Autobello_DoorPanel_FR_Carpeted":{
+        "information":{"authors":"Oaf","name":"Carpeted Right Door Panel (UCP)","value":10},
+        "slotType":"UCP_Autobello_DoorPanel_FR",
+        "flexbodies":[["mesh","[group]:","nonFlexMaterials"],["UCP_Autobello_DoorPanel_FR_Carpeted",["door_R"]]],
+        "sounds":{"$+cabinFilterCoef":0.01}
+    },
+    "UCP_Autobello_DoorPanel_FL_BareMetal":{
+        "information":{"authors":"Oaf","name":"Metal Left Door Panel (UCP)","value":0},
+        "slotType":"UCP_Autobello_DoorPanel_FL",
+        "flexbodies":[["mesh","[group]:","nonFlexMaterials"],["UCP_Autobello_DoorPanel_FL_BareMetal",["door_L"],[],{"pos":{"x":-2,"y":0,"z":0}}]]
+    },
+    "UCP_Autobello_DoorPanel_FR_BareMetal":{
+        "information":{"authors":"Oaf","name":"Metal Right Door Panel (UCP)","value":0},
+        "slotType":"UCP_Autobello_DoorPanel_FR",
+        "flexbodies":[["mesh","[group]:","nonFlexMaterials"],["UCP_Autobello_DoorPanel_FR_BareMetal",["door_R"],[],{"pos":{"x":-2,"y":0,"z":0}}]]
+    },
+    "UCP_Autobello_DoorLatchRelease_L":{
+        "information":{"authors":"Oaf","name":"Door Latch Release (UCP)","value":15},
+        "slotType":"UCP_Autobello_DoorLatchRelease_L",
+        "flexbodies":[["mesh","[group]:","nonFlexMaterials"],["UCP_Autobello_DoorLatchRelease_L",["door_L"]]],
+        "triggers":[
+            ["id","label","idRef:","idX:","idY:","type","size","baseRotation","rotation","translation","baseTranslation"],
+            ["door_L_int","","d7l","d8l","d4l","box",{"x":0.03,"y":0.05,"z":0.03},{"x":12,"y":-1,"z":-3},{"x":0,"y":0,"z":0},{"x":0,"y":0,"z":0},{"x":0.098,"y":-0.06,"z":-0.09}]
+        ],
+        "triggerEventLinks":[["triggerId:triggers","action","targetEventId:events"],["door_R_int","action0","doorLatch_R"]]
+    },
+    "UCP_Autobello_DoorLatchRelease_R":{
+        "information":{"authors":"Oaf","name":"Door Latch Release (UCP)","value":15},
+        "slotType":"UCP_Autobello_DoorLatchRelease_R",
+        "flexbodies":[["mesh","[group]:","nonFlexMaterials"],["UCP_Autobello_DoorLatchRelease_R",["door_R"]]],
+        "triggers":[
+            ["id","label","idRef:","idX:","idY:","type","size","baseRotation","rotation","translation","baseTranslation"],
+            ["door_R_int","","d7r","d8r","d4r","box",{"x":0.03,"y":0.05,"z":0.03},{"x":-12,"y":1,"z":3},{"x":0,"y":0,"z":0},{"x":0,"y":0,"z":0},{"x":0.1,"y":-0.05,"z":0.04}]
+        ],
+        "triggerEventLinks":[["triggerId:triggers","action","targetEventId:events"],["door_L_int","action0","doorLatch_L"]]
+    },
+    "UCP_Autobello_WindowCrank_L":{
+        "information":{"authors":"Oaf","name":"Window Crank (UCP)","value":15},
+        "slotType":"UCP_Autobello_WindowCrank_L",
+        "flexbodies":[["mesh","[group]:","nonFlexMaterials"],["UCP_Autobello_WindowCrank_L",["door_L"]]]
+    },
+    "UCP_Autobello_WindowCrank_R":{
+        "information":{"authors":"Oaf","name":"Window Crank (UCP)","value":15},
+        "slotType":"UCP_Autobello_WindowCrank_R",
+        "flexbodies":[["mesh","[group]:","nonFlexMaterials"],["UCP_Autobello_WindowCrank_R",["door_R"]]]
+    },
+    "UCP_Autobello_DoorPullHandleBracket_L":{
+        "information":{"authors":"Oaf","name":"Pull Handle Bracket (UCP)","value":4},
+        "slotType":"UCP_Autobello_DoorPullHandleBracket_L",
+        "slots":[["type","default","description"],["UCP_Autobello_DoorPullHandle_L","UCP_Autobello_DoorPullHandle_L","Pull Handle"]],
+        "flexbodies":[["mesh","[group]:","nonFlexMaterials"],["UCP_Autobello_DoorPullHandleBracket_L",["door_L"]]]
+    },
+    "UCP_Autobello_DoorPullHandleBracket_R":{
+        "information":{"authors":"Oaf","name":"Pull Handle Bracket (UCP)","value":4},
+        "slotType":"UCP_Autobello_DoorPullHandleBracket_R",
+        "slots":[["type","default","description"],["UCP_Autobello_DoorPullHandle_R","UCP_Autobello_DoorPullHandle_R","Pull Handle"]],
+        "flexbodies":[["mesh","[group]:","nonFlexMaterials"],["UCP_Autobello_DoorPullHandleBracket_R",["door_R"]]]
+    },
+    "UCP_Autobello_DoorPullHandle_L":{
+        "information":{"authors":"Oaf","name":"Pull Handle (UCP)","value":6},
+        "slotType":"UCP_Autobello_DoorPullHandle_L",
+        "flexbodies":[["mesh","[group]:","nonFlexMaterials"],["UCP_Autobello_DoorPullHandle_L",["door_L"]]]
+    },
+    "UCP_Autobello_DoorPullHandle_R":{
+        "information":{"authors":"Oaf","name":"Pull Handle (UCP)","value":6},
+        "slotType":"UCP_Autobello_DoorPullHandle_R",
+        "flexbodies":[["mesh","[group]:","nonFlexMaterials"],["UCP_Autobello_DoorPullHandle_R",["door_R"]]]
+    },
+    //OTHER
+    "UCP_Autobello_Visor_L":{
+        "information":{"authors":"Oaf","name":"Left Sunvisor (UCP)","value":25},
+        "slotType":"UCP_Autobello_Visor_L",
+        "flexbodies":[["mesh","[group]:","nonFlexMaterials"],["UCP_Autobello_Visor_L",["roof"]]]
+    },
+    "UCP_Autobello_Visor_R":{
+        "information":{"authors":"Oaf","name":"Right Sunvisor (UCP)","value":25},
+        "slotType":"UCP_Autobello_Visor_R",
+        "flexbodies":[["mesh","[group]:","nonFlexMaterials"],["UCP_Autobello_Visor_R",["roof"]]]
+    },
+    "UCP_Autobello_RoofPanel_Carpeted":{
+        "information":{"authors":"Oaf","name":"Carpeted Roof Panel (UCP)","value":20},
+        "slotType":"UCP_Autobello_RoofPanel",
+        "flexbodies":[["mesh","[group]:","nonFlexMaterials"],["UCP_Autobello_RoofPanel_Carpeted",["roof"]]],
+        "sounds":{"$+cabinFilterCoef":0.02}
+    },
+    "UCP_Autobello_DoorPanel_RL_Carpeted":{
+        "information":{"authors":"Oaf","name":"Carpeted Left Interior Panel (UCP)","value":10},
+        "slotType":"UCP_Autobello_DoorPanel_RL",
+        "flexbodies":[["mesh","[group]:","nonFlexMaterials"],["UCP_Autobello_DoorPanel_RL_Carpeted",["body","floor"]]],
+        "sounds":{"$+cabinFilterCoef":0.01}
+    },
+    "UCP_Autobello_DoorPanel_RR_Carpeted":{
+        "information":{"authors":"Oaf","name":"Carpeted Right Interior Panel (UCP)","value":10},
+        "slotType":"UCP_Autobello_DoorPanel_RR",
+        "flexbodies":[["mesh","[group]:","nonFlexMaterials"],["UCP_Autobello_DoorPanel_RR_Carpeted",["body","floor"]]],
+        "sounds":{"$+cabinFilterCoef":0.01}
+    },
+
+
+
+    "UCP_Autobello_RoofPanel_BareMetal":{
+        "information":{"authors":"Oaf","name":"Metal Roof Panel (UCP)","value":0},
+        "slotType":"UCP_Autobello_RoofPanel",
+        "flexbodies":[["mesh","[group]:","nonFlexMaterials"],["UCP_Autobello_RoofPanel_BareMetal",["roof"],[],{"pos":{"x":-2,"y":0,"z":0}}]]
+    },
+    "UCP_Autobello_DoorPanel_RL_BareMetal":{
+        "information":{"authors":"Oaf","name":"Metal Left Interior Panel (UCP)","value":0},
+        "slotType":"UCP_Autobello_DoorPanel_RL",
+        "flexbodies":[["mesh","[group]:","nonFlexMaterials"],["UCP_Autobello_DoorPanel_RL_BareMetal",["body","floor"],[],{"pos":{"x":-2,"y":0,"z":0}}]]
+    },
+    "UCP_Autobello_DoorPanel_RR_BareMetal":{
+        "information":{"authors":"Oaf","name":"Metal Right Interior Panel (UCP)","value":0},
+        "slotType":"UCP_Autobello_DoorPanel_RR",
+        "flexbodies":[["mesh","[group]:","nonFlexMaterials"],["UCP_Autobello_DoorPanel_RR_BareMetal",["body","floor"],[],{"pos":{"x":-2,"y":0,"z":0}}]]
+    },
+
+
+
+    "UCP_Autobello_PBrake":{
+        "information":{"authors":"Oaf","name":"Parking Brake (UCP)","value":50},
+        "slotType":"UCP_Autobello_PBrake",
+        "props":[["func","mesh","idRef:","idX:","idY:","baseRotation","rotation","translation","min","max","offset","multiplier"],["parkingbrake","autobello_parking_brake_lever","b3r","b3l","b4r",{"x":90,"y":0,"z":0},{"x":-30,"y":0,"z":0},{"x":0,"y":0,"z":0},0,1,0,1]],
+        "flexbodies":[["mesh","[group]:","nonFlexMaterials"],["autobello_parking_brake_bracket",["floor"]]]
+    },
+    "UCP_Autobello_BrakePedal":{
+        "information":{"authors":"Oaf","name":"Brake Pedal (UCP)","value":50},
+        "slotType":"UCP_Autobello_BrakePedal",
+        "props":[["func","mesh","idRef:","idX:","idY:","baseRotation","rotation","translation","min","max","offset","multiplier"],["brake","autobello_brakepedal","b1l","b1ll","b1rr",{"x":-5,"y":-90,"z":0},{"x":20,"y":0,"z":0},{"x":0.0,"y":0,"z":0},0,1,0,1]]
+    },
+    "UCP_Autobello_GasPedal":{
+        "information":{"authors":"Oaf","name":"Gas Pedal (UCP)","value":50},
+        "slotType":"UCP_Autobello_GasPedal",
+        "props":[["func","mesh","idRef:","idX:","idY:","baseRotation","rotation","translation","min","max","offset","multiplier"],["throttle","autobello_gaspedal","b1l","b1ll","b1rr",{"x":0,"y":-90,"z":0},{"x":20,"y":0,"z":0},{"x":0.0,"y":0,"z":0},0,1,0,1]]
+    },
+    "UCP_Autobello_TurnSignalStalk":{
+        "information":{"authors":"Oaf","name":"Turn Signal Stalk (UCP)","value":50},
+        "slotType":"UCP_Autobello_TurnSignalStalk",
+        "props":[["func","mesh","idRef:","idX:","idY:","baseRotation","rotation","translation","min","max","offset","multiplier"],["turnsignal","autobello_signalstalk","int_strw","dshl","dshr",{"x":0,"y":-90,"z":0},{"x":0,"y":0,"z":10},{"x":0,"y":0,"z":0},-1,1,0,1]]
+    },
+
+    // BEAMNG INTERIOR
+
+    //s-170
+    //b-190
+
+    "UCP_Autobello_BeamNGInterior":{
+        "information":{"authors":"Oaf","name":"Interior (UCP)","value":50},
+        "slotType":"autobello_interior",
+        "slots":[
+            ["type","default","description"],
+            ["autobello_interior_accessory","","Interior Accessory"],
+            //["UCP_Autobello_HeaterVent","UCP_Autobello_HeaterVent","Floor Heat Outlet"],
+            ["UCP_Autobello_HeaterPipes","UCP_Autobello_HeaterPipes","Defroster Pipes"],
+            ["UCP_Autobello_ShifterPlate","UCP_Autobello_ShifterPlate","Shifter Plate"],
+            ["UCP_Autobello_GasPedalBumpStop","UCP_Autobello_GasPedalBumpStop","Gas Pedal Bump Stop"],
+            ["UCP_Autobello_BrakePedalBumpStop","UCP_Autobello_BrakePedalBumpStop","Brake Pedal Bump Stop"],
+            ["UCP_Autobello_ClutchPedalBumpStop","UCP_Autobello_ClutchPedalBumpStop","Clutch Pedal Bump Stop"],
+            ["UCP_Autobello_Battery","UCP_Autobello_Battery","Battery"],
+            ["UCP_Autobello_SteeringColumn","UCP_Autobello_SteeringColumn","Steering Column",{"coreSlot":true}],
+            ["UCP_Autobello_GuageCluster","UCP_Autobello_GuageCluster","Guage Cluster"],
+            ["UCP_Autobello_RearViewMirror","UCP_Autobello_RearViewMirror","Rear-View Mirror"],
+            ["UCP_Autobello_SoundDeadening","UCP_Autobello_SoundDeadening","Sound Deadening"]
+        ],
+        "flexbodies":[
+            ["mesh","[group]:","nonFlexMaterials"],
+            ["UCP_Autobello_BatteryTerminalLeads",["floor","intparts"]],
+            ["UCP_Autobello_GasPedalHinge",["floor","intparts"]],
+            ["UCP_Autobello_HeaterVent",["floor","intparts","dashboard"]],
+            ["autobello_interior_switches",["floor","body","dashboard"]]
+        ],
+        "sounds":{"$+cabinFilterCoef":0.04}
+    },
+    "UCP_Autobello_GasPedalBumpStop":{
+        "information":{"authors":"Oaf","name":"Gas Pedal Bump Stop (UCP)","value":5},
+        "slotType":"UCP_Autobello_GasPedalBumpStop",
+        "flexbodies":[["mesh","[group]:","nonFlexMaterials"],["UCP_Autobello_GasPedalBumpStop",["floor"]]]
+    },
+    "UCP_Autobello_BrakePedalBumpStop":{
+        "information":{"authors":"Oaf","name":"Brake Pedal Bump Stop (UCP)","value":5},
+        "slotType":"UCP_Autobello_BrakePedalBumpStop",
+        "flexbodies":[["mesh","[group]:","nonFlexMaterials"],["UCP_Autobello_BrakePedalBumpStop",["floor"]]]
+    },
+    "UCP_Autobello_ClutchPedalBumpStop":{
+        "information":{"authors":"Oaf","name":"Clutch Pedal Bump Stop (UCP)","value":5},
+        "slotType":"UCP_Autobello_ClutchPedalBumpStop",
+        "flexbodies":[["mesh","[group]:","nonFlexMaterials"],["UCP_Autobello_ClutchPedalBumpStop",["floor"]]]
+    },
+    "UCP_Autobello_ShifterPlate":{
+        "information":{"authors":"Oaf","name":"Shifter Plate (UCP)","value":5},
+        "slotType":"UCP_Autobello_ShifterPlate",
+        "flexbodies":[["mesh","[group]:","nonFlexMaterials"],["UCP_Autobello_ShifterPlate",["floor","intparts"]]]
+    },
+    "UCP_Autobello_Battery":{
+        "information":{"authors":"Oaf","name":"W.A.D.™ Battery (UCP)","value":40},
+        "slotType":"UCP_Autobello_Battery",
+        "flexbodies":[["mesh","[group]:","nonFlexMaterials"],["UCP_Autobello_Battery",["floor","intparts"]]]
+    },
+    "UCP_Autobello_HeaterPipes":{
+        "information":{"authors":"Oaf","name":"Defroster Pipes (UCP)","value":20},
+        "slotType":"UCP_Autobello_HeaterPipes",
+        "flexbodies":[["mesh","[group]:","nonFlexMaterials"],["UCP_Autobello_HeaterPipes",["floor","intparts"]]]
+    },
+    "UCP_Autobello_SteeringColumn":{
+        "information":{"authors":"Oaf","name":"Basic Steering Column (UCP)","value":0},
+        "slotType":"UCP_Autobello_SteeringColumn",
+        "flexbodies":[
+            ["mesh","[group]:","nonFlexMaterials"],
+            ["UCP_Autobello_SteeringColumn",["floor","body","dashboard"]],
+            ["autobello_interior_column_a",["floor","body","dashboard"]]
+        ]
+    },
+    "UCP_Autobello_SteeringColumn_Sport":{
+        "information":{"authors":"Oaf","name":"Sport Steering Column (UCP)","value":15},
+        "slotType":"UCP_Autobello_SteeringColumn",
+        "flexbodies":[
+            ["mesh","[group]:","nonFlexMaterials"],
+            ["UCP_Autobello_SteeringColumn",["floor","body","dashboard"]],
+            ["autobello_interior_column_b",["floor","body","dashboard"]]
+        ]
+    },
+    "UCP_Autobello_GuageCluster":{
+        "information":{"authors":"Oaf","name":"Basic Guage Cluster (UCP)","value":40},
+        "slotType":"UCP_Autobello_GuageCluster",
+        "flexbodies":[
+            ["mesh","[group]:","nonFlexMaterials"],
+            ["autobello_interior_gauges_a",["dashboard","body"]],
+            ["autobello_decals_gauges_a",["dashboard","body"]]
+        ],
+        "props":[
+            ["func","mesh","idRef:","idX:","idY:","baseRotation","rotation","translation","min","max","offset","multiplier"],
+            ["wheelspeed","autobello_needle_speedo_a","dshl","dshr","w2l",{"x":-44,"y":0,"z":180},{"x":0,"y":-5.4,"z":0},{"x":0,"y":0,"z":0},0,40,-19.45,1],
+            ["fuel","autobello_needle_fuel_a","dshl","dshr","w2l",{"x":-44,"y":0,"z":180},{"x":0,"y":30,"z":0},{"x":0,"y":0,"z":0},0,1,0.5,1],
+            ["oiltemp","autobello_needle_temp_a","dshl","dshr","w2l",{"x":-44,"y":0,"z":180},{"x":0,"y":-0.375,"z":0},{"x":0,"y":0,"z":0},40,120,0,1]
+        ],
+        "controller":[["fileName"],["gauges/analogOdometer",{"name":"analogOdometer"}]],
+        "analogOdometer":{
+            "configuration":{
+                "materialName":"@generic_gauges_odo",
+                "htmlPath":"local://local/vehicles/common/analogOdo.html",
+                "displayWidth":512,
+                "displayHeight":32,
+                "odometerDigits":7,
+                "odometerHasDecimalSeparator":true,
+                "tripHasDecimalSeparator":true,
+                "unit":"metric",
+                "floatStyle":{"color":"black"},
+                "bodyStyle":{
+                    "background":"url('/vehicles/common/odometer_analog_b.cef_color.png')",
+                    "font-family":"OpenSans",
+                    "font-size":"28px",
+                    "color":"white",
+                    "letter-spacing":"15.5px",
+                    "margin":"-4.5px 10.5px",
+                    "transform":"scaleX(1.26)",
+                    "transform-origin":"left"
+                },
+                "tripDivStyle":{
+                    "margin-left":"-3px",
+                    "position":"fixed",
+                    "letter-spacing":"32px"
+                }
+            }
+        }
+    },
+    "UCP_Autobello_GuageCluster_Sport":{
+        "information":{"authors":"Oaf","name":"Sport Guage Cluster (UCP)","value":60},
+        "slotType":"UCP_Autobello_GuageCluster",
+        "flexbodies":[
+            ["mesh","[group]:","nonFlexMaterials"],
+            ["autobello_interior_gauges_b",["dashboard","body"]],
+            ["autobello_decals_gauges_b",["dashboard","body"]]
+        ],
+        "props":[
+            ["func","mesh","idRef:","idX:","idY:","baseRotation","rotation","translation","min","max","offset","multiplier"],
+            ["rpm","autobello_needle_tacho_b","dshl","dshr","w2l",{"x":-40,"y":0,"z":180},{"x":0,"y":-0.039,"z":0},{"x":0,"y":0,"z":0},0,6000,-3050,1],
+            ["wheelspeed","autobello_needle_speedo_b","dshl","dshr","w2l",{"x":-40,"y":0,"z":180},{"x":0,"y":-4.44,"z":0},{"x":0,"y":0,"z":0},0,55.56,-27.7778,1],
+            ["fuel","autobello_needle_fuel_b","dshl","dshr","w2l",{"x":-40,"y":0,"z":180},{"x":0,"y":72.5,"z":0},{"x":0,"y":0,"z":0},0,1,1.98,1],
+            ["oiltemp","autobello_needle_temp_b","dshl","dshr","w2l",{"x":-40,"y":0,"z":180},{"x":0,"y":-0.92,"z":0},{"x":0,"y":0,"z":0},40,120,-80,1]
+        ],
+        "controller":[["fileName"],["gauges/analogOdometer",{"name":"analogOdometer"}]],
+        "analogOdometer":{
+            "configuration":{
+                "materialName":"@generic_gauges_odo",
+                "htmlPath":"local://local/vehicles/common/analogOdo.html",
+                "displayWidth":512,
+                "displayHeight":32,
+                "odometerDigits":7,
+                "odometerHasDecimalSeparator":true,
+                "tripHasDecimalSeparator":true,
+                "unit":"metric",
+                "floatStyle":{"color":"black"},
+                "bodyStyle":{
+                    "background":"url('/vehicles/common/odometer_analog_b.cef_color.png')",
+                    "font-family":"OpenSans",
+                    "font-size":"28px",
+                    "color":"white",
+                    "letter-spacing":"15.5px",
+                    "margin":"-4.5px 10.5px",
+                    "transform":"scaleX(1.26)",
+                    "transform-origin":"left"
+                },
+                "tripDivStyle":{
+                    "margin-left":"-3px",
+                    "position":"fixed",
+                    "letter-spacing":"32px"
+                }
+            }
+        }
+    },
+    "UCP_Autobello_RearViewMirror":{
+        "information":{"authors":"Oaf","name":"Rear-View Mirror (UCP)","value":20},
+        "slotType":"UCP_Autobello_RearViewMirror",
+        "flexbodies":[["mesh","[group]:","nonFlexMaterials"],["autobello_interior_mirror_a",["roof"]]],
+        "mirrors":[["mesh","idRef:","id1:","id2:"],["autobello_interior_mirror_a","t1l","t1r","t2l",{"refBaseTranslation":{"x":-0.18,"y":0.027,"z":-0.095},"baseRotationGlobal":{"x":3.9,"y":0.0,"z":9.8}}]]
+    },
+    "UCP_Autobello_RearViewMirror_Sport":{
+        "information":{"authors":"Oaf","name":"Sport Rear-View Mirror (UCP)","value":40},
+        "slotType":"UCP_Autobello_RearViewMirror",
+        "flexbodies":[["mesh","[group]:","nonFlexMaterials"],["autobello_interior_mirror_b",["roof"]]],
+        "mirrors":[["mesh","idRef:","id1:","id2:"],["autobello_interior_mirror_b","t1l","t1r","t2l",{"refBaseTranslation":{"x":-0.18,"y":0.027,"z":-0.095},"baseRotationGlobal":{"x":3.9,"y":0.0,"z":9.8}}]]
+    },
+    "UCP_Autobello_SoundDeadening":{
+        "information":{"authors":"Oaf","name":"Sound Deadening (UCP)","value":30},
+        "slotType":"UCP_Autobello_SoundDeadening",
+        "sounds":{"$+cabinFilterCoef":0.04}
+    },
+    //-------------------------------
+    "UCP_Autobello_SpareWheelBracket": {
+        "information":{"authors":"Oaf","name":"Spare Wheel Bracket (UCP)","value":25},
+        "slotType":"autobello_sparewheel",
+        "flexbodies":[["mesh","[group]:","nonFlexMaterials"],["autobello_sparewheelbracket",["body","uppermounts_F","lowermounts_F"]]]
+    }
+}
