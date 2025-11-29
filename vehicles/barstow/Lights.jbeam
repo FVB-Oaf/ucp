@@ -1,0 +1,184 @@
+{
+    "UCP_Barstow_FrontBumperSignal_L_FrontFacing":{
+        "information":{"authors":"Oaf","name":"Front-Facing Left Signal (UCP)","value":25},
+        "slotType":"UCP_Barstow_FrontBumperSignal_L_FrontFacing",
+        "flexbodies": [
+            ["mesh","[group]:","nonFlexMaterials"],
+            {"deformGroup":"bumpersignal_FL_break","deformMaterialBase":"barstow_lights","deformMaterialDamaged":"barstow_lights"},
+            ["barstow_bumpersignal_FL_a",["barstow_bumper_F"],[],{"deformSound":"event:>Destruction>Vehicle>Glass>glassbreaksound2","deformVolume":0.15}],
+            {"deformGroup":"bumpersignal_FL_break","deformMaterialBase":"barstow_glass","deformMaterialDamaged":"barstow_glass_dmg"},
+            ["barstow_bumpersignalglass_FL_a",["barstow_bumper_F"],[],{"deformSound":"event:>Destruction>Vehicle>Glass>glassbreaksound2","deformVolume":0.15}],
+            {"deformGroup":""}
+        ],
+        "props": [
+            ["func","mesh","idRef:","idX:","idY:","baseRotation","rotation","translation","min","max","offset","multiplier"],
+            {"lightInnerAngle":0,"lightOuterAngle":120,"lightRange":8,"lightColor":{"r":255,"g":150,"b":0,"a":255},"lightAttenuation":{"x":0,"y":1,"z":1},"lightCastShadows":false,"flareName":"vehicleBrakeLightFlare","cookieName":"art/special/BNG_light_cookie_headlight.dds","texSize":512,"shadowSoftness":0.1},
+            ["lowhighSignal_L_filament","SPOTLIGHT","fb2ll","fb2l","fb1ll",{"x":0,"y":0,"z":0},{"x":0,"y":0,"z":0},{"x":0,"y":0,"z":0},0,0,0,1,{"baseTranslation":{"x":0.55,"y":0.07,"z":-0.02},"flareScale":0.02,"lightBrightness":0.03,"deformGroup":"bumpersignal_FL_break","lightScaling":{}}]
+        ]
+    },
+    "UCP_Barstow_FrontBumperSignal_R_FrontFacing":{
+        "information":{"authors":"Oaf","name":"Front-Facing Right Signal (UCP)","value":25},
+        "slotType":"UCP_Barstow_FrontBumperSignal_R_FrontFacing",
+        "flexbodies": [
+            ["mesh","[group]:","nonFlexMaterials"],
+            {"deformGroup":"bumpersignal_FR_break","deformMaterialBase":"barstow_lights","deformMaterialDamaged":"barstow_lights"},
+            ["barstow_bumpersignal_FR_a",["barstow_bumper_F"],[],{"deformSound":"event:>Destruction>Vehicle>Glass>glassbreaksound1","deformVolume":0.15}],
+            {"deformGroup":"bumpersignal_FR_break","deformMaterialBase":"barstow_glass","deformMaterialDamaged":"barstow_glass_dmg"},
+            ["barstow_bumpersignalglass_FR_a",["barstow_bumper_F"],[],{"deformSound":"event:>Destruction>Vehicle>Glass>glassbreaksound1","deformVolume":0.15}],
+            {"deformGroup":""}
+        ],
+        "props": [
+            ["func","mesh","idRef:","idX:","idY:","baseRotation","rotation","translation","min","max","offset","multiplier"],
+            {"lightInnerAngle":0,"lightOuterAngle":120,"lightRange":8,"lightColor":{"r":255,"g":150,"b":0,"a":255},"lightAttenuation":{"x":0,"y":1,"z":1},"lightCastShadows":false,"flareName":"vehicleBrakeLightFlare","cookieName":"art/special/BNG_light_cookie_headlight.dds","texSize":512,"shadowSoftness":0.1},
+            ["lowhighSignal_R_filament","SPOTLIGHT","fb2rr","fb2r","fb1rr",{"x":180,"y":0,"z":0},{"x":0,"y":0,"z":0},{"x":0,"y":0,"z":0},0,0,0,1,{"baseTranslation":{"x":0.55,"y":0.07,"z":0.02},"flareScale":0.02,"lightBrightness":0.03,"deformGroup":"bumpersignal_FR_break","lightScaling":{}}]
+        ]
+    },
+    "UCP_Barstow_FrontBumperSignal_L_SideFacing":{
+        "information":{"authors":"Oaf","name":"Side-Facing Left Signal (UCP)","value":25},
+        "slotType":"UCP_Barstow_FrontBumperSignal_L_SideFacing",
+        "flexbodies": [
+            ["mesh","[group]:","nonFlexMaterials"],
+            {"deformGroup":"bumpersignal_FL_break","deformMaterialBase":"barstow_lights","deformMaterialDamaged":"barstow_lights"},
+            ["barstow_bumpersignal_FL_b",["barstow_bumper_F"],[],{"deformSound":"event:>Destruction>Vehicle>Glass>glassbreaksound2","deformVolume":0.15}],
+            {"deformGroup":"bumpersignal_FL_break","deformMaterialBase":"barstow_glass","deformMaterialDamaged":"barstow_glass_dmg"},
+            ["barstow_bumpersignalglass_FL_b",["barstow_bumper_F"],[],{"deformSound":"event:>Destruction>Vehicle>Glass>glassbreaksound2","deformVolume":0.15}],
+            {"deformGroup":""}
+        ],
+        "props": [
+            ["func","mesh","idRef:","idX:","idY:","baseRotation","rotation","translation","min","max","offset","multiplier"],
+            {"lightInnerAngle":0,"lightOuterAngle":120,"lightRange":8,"lightColor":{"r":255,"g":150,"b":0,"a":255},"lightAttenuation":{"x":0,"y":1,"z":1},"lightCastShadows":false,"flareName":"vehicleBrakeLightFlare","cookieName":"art/special/BNG_light_cookie_headlight.dds","texSize":512,"shadowSoftness":0.1},
+            ["lowhighSignal_L_filament","SPOTLIGHT","fb4ll","fb2ll","fb3ll",{"x":0,"y":0,"z":0},{"x":0,"y":0,"z":0},{"x":0,"y":0,"z":0},0,0,0,1,{"baseTranslation":{"x":0.2,"y":1.25,"z":-0.01},"flareScale":0.02,"lightBrightness":0.03,"deformGroup":"bumpersignal_FL_break","lightScaling":{}}]
+        ]
+    },
+    "UCP_Barstow_FrontBumperSignal_R_SideFacing":{
+        "information":{"authors":"Oaf","name":"Side-Facing Right Signal (UCP)","value":25},
+        "slotType":"UCP_Barstow_FrontBumperSignal_R_SideFacing",
+        "flexbodies": [
+            ["mesh","[group]:","nonFlexMaterials"],
+            {"deformGroup":"bumpersignal_FR_break","deformMaterialBase":"barstow_lights","deformMaterialDamaged":"barstow_lights"},
+            ["barstow_bumpersignal_FR_b",["barstow_bumper_F"],[],{"deformSound":"event:>Destruction>Vehicle>Glass>glassbreaksound2","deformVolume":0.15}],
+            {"deformGroup":"bumpersignal_FR_break","deformMaterialBase":"barstow_glass","deformMaterialDamaged":"barstow_glass_dmg"},
+            ["barstow_bumpersignalglass_FR_b",["barstow_bumper_F"],[],{"deformSound":"event:>Destruction>Vehicle>Glass>glassbreaksound2","deformVolume":0.15}],
+            {"deformGroup":""}
+        ],
+        "props": [
+            ["func","mesh","idRef:","idX:","idY:","baseRotation","rotation","translation","min","max","offset","multiplier"],
+            {"lightInnerAngle":0,"lightOuterAngle":120,"lightRange":8,"lightColor":{"r":255,"g":150,"b":0,"a":255},"lightAttenuation":{"x":0,"y":1,"z":1},"lightCastShadows":false,"flareName":"vehicleBrakeLightFlare","cookieName":"art/special/BNG_light_cookie_headlight.dds","texSize":512,"shadowSoftness":0.1},
+            ["lowhighSignal_R_filament","SPOTLIGHT","fb4rr","fb2rr","fb3rr",{"x":180,"y":0,"z":0},{"x":0,"y":0,"z":0},{"x":0,"y":0,"z":0},0,0,0,1,{"baseTranslation":{"x":0.2,"y":1.25,"z":0.01},"flareScale":0.02,"lightBrightness":0.03,"deformGroup":"bumpersignal_FR_break","lightScaling":{}}]
+        ]
+    },
+    "UCP_Barstow_ConcealedHeadlightsGrille_LightCluster_L":{
+        "information":{"authors":"Oaf","name":"Left Headlight Cluster (UCP)","value":1000},
+        "slotType":"UCP_Barstow_ConcealedHeadlightsGrille_LightCluster_L",
+        "nodes":[
+            ["id","posX","posY","posZ"],
+            {"collision":true,"nodeWeight":1.07,"frictionCoef":0.5,"nodeMaterial":"|NM_METAL","selfCollision":false,"group":"barstow_headlight_L"},
+            ["he1l",0.45,-2.10,0.73],
+            ["he1ll",0.82,-2.07,0.73],
+            ["he2l",0.45,-2.10,0.56],
+            ["he2ll",0.82,-2.07,0.56],
+            ["he4l",0.45,-1.95,0.73],
+            ["he4ll",0.82,-1.98,0.73],
+            ["he5l",0.45,-1.95,0.56],
+            ["he5ll",0.82,-1.98,0.56],
+            {"collision":false,"selfCollision":false,"group":""},
+            ["he3l",0.52,-2.017,0.646],//hinge
+            ["he3ll",0.8,-2.017,0.646]//hinge
+        ],
+        "flexbodies": [
+            ["mesh","[group]:","nonFlexMaterials"],
+            ["barstow_lamp_stealth_L",["barstow_headlight_L"]],
+            {"deformGroup":"headlightglass_L_break","deformMaterialBase":"sealedbeam","deformMaterialDamaged":"sealedbeam"},
+            ["barstow_headlight_stealth_L",["barstow_headlight_L"],[],{"deformSound":"event:>Destruction>Vehicle>Glass>glassbreaksound4","deformVolume":0.5}],
+            {"deformGroup":"headlightglass_L_break","deformMaterialBase":"sealedbeam_glass","deformMaterialDamaged":"sealedbeam_glass_dmg"},
+            ["barstow_headlightglass_stealth_L",["barstow_headlight_L"]],
+            {"deformGroup":""}
+        ],
+        "props":[
+            ["func","mesh","idRef:","idX:","idY:","baseRotation","rotation","translation","min","max","offset","multiplier"],
+            {"lightInnerAngle":70,"lightOuterAngle":80,"lightColor":{"r":255,"g":255,"b":150,"a":255},"lightAttenuation":{"x":0,"y":1,"z":1},"lightCastShadows":true,"flareName":"vehicleHeadLightFlare","cookieName":"art/special/BNG_light_cookie_headlight.dds","texSize":512,"shadowSoftness":0.5},
+            /*lo*/["lowbeam_filament","SPOTLIGHT","he5ll","he5l","he4ll",{"x":180,"y":35,"z":20},{"x":0,"y":0,"z":0},{"x":0,"y":0,"z":0},0,0,0,1,{"baseTranslation":{"x":0.2,"y":0.42,"z":-0.04},"lightRange":50,"lightBrightness":0.35,"lightOuterAngle":80,"flareScale":0.06,"deformGroup":"headlightglass_L_break","lightScaling":{}}],
+            /*hi*/["highbeam_filament","SPOTLIGHT","he5ll","he5l","he4ll",{"x":180,"y":35,"z":20},{"x":0,"y":0,"z":0},{"x":0,"y":0,"z":0},0,0,0,1,{"baseTranslation":{"x":0.7,"y":0.42,"z":-0.05},"lightRange":80,"lightBrightness":0.6,"lightOuterAngle":80,"flareScale":0.09,"deformGroup":"headlightglass_L_break","lightScaling":{}}]
+        ],
+        "torsionHydros": [
+            ["id1:","id2:","id3:","id4:"],
+            {"spring":10000,"damp":0,"deform":15000,"strength":20000},
+            ["he2l","he3l","he3ll","g1ll",{"factor":3.145,"inRate":2.5,"outRate":2.5,"inputSource":"lowhighbeam"}]
+        ]
+        //beams are in the jbeam for UCP_Barstow_ConcealedHeadlightsGrille
+    },
+    "UCP_Barstow_ConcealedHeadlightsGrille_LightCluster_R":{
+        "information":{"authors":"Oaf","name":"Right Headlight Cluster (UCP)","value":1000},
+        "slotType":"UCP_Barstow_ConcealedHeadlightsGrille_LightCluster_R",
+        "nodes":[
+            ["id","posX","posY","posZ"],
+            {"collision":true,"nodeWeight":1.07,"frictionCoef":0.5,"nodeMaterial":"|NM_METAL","selfCollision":false,"group":"barstow_headlight_R"},
+            ["he1r",-0.45,-2.10,0.73],
+            ["he1rr",-0.82,-2.07,0.73],
+            ["he2r",-0.45,-2.10,0.56],
+            ["he2rr",-0.82,-2.07,0.56],
+            ["he4r",-0.45,-1.95,0.73],
+            ["he4rr",-0.82,-1.98,0.73],
+            ["he5r",-0.45,-1.95,0.56],
+            ["he5rr",-0.82,-1.98,0.56],
+            {"collision":false,"selfCollision":false,"group":""},
+            ["he3rr",-0.8,-2.017,0.646],//hinge
+            ["he3r",-0.52,-2.017,0.646]//hinge
+        ],
+        "flexbodies": [
+            ["mesh","[group]:","nonFlexMaterials"],
+            ["barstow_lamp_stealth_R",["barstow_headlight_R"]],
+            {"deformGroup":"headlightglass_R_break","deformMaterialBase":"sealedbeam","deformMaterialDamaged":"sealedbeam"},
+            ["barstow_headlight_stealth_R",["barstow_headlight_R"],[],{"deformSound":"event:>Destruction>Vehicle>Glass>glassbreaksound3","deformVolume":0.5}],
+            {"deformGroup":"headlightglass_R_break","deformMaterialBase":"sealedbeam_glass","deformMaterialDamaged":"sealedbeam_glass_dmg"},
+            ["barstow_headlightglass_stealth_R",["barstow_headlight_R"]],
+            {"deformGroup":""}
+        ],
+        "props":[
+            ["func","mesh","idRef:","idX:","idY:","baseRotation","rotation","translation","min","max","offset","multiplier"],
+            {"lightInnerAngle":70,"lightOuterAngle":80,"lightColor":{"r":255,"g":255,"b":150,"a":255},"lightAttenuation":{"x":0,"y":1,"z":1},"lightCastShadows":true,"flareName":"vehicleHeadLightFlare","cookieName":"art/special/BNG_light_cookie_headlight.dds","texSize":512,"shadowSoftness":0.5},
+            /*lo*/["lowbeam_filament","SPOTLIGHT","he5rr","he5r","he4rr",{"x":15,"y":35,"z":-15},{"x":0,"y":0,"z":0},{"x":0,"y":0,"z":0},0,0,0,1,{"baseTranslation":{"x":0.2,"y":0.42,"z":0.04},"lightRange":50,"lightBrightness":0.35,"lightOuterAngle":80,"flareScale":0.06,"deformGroup":"headlightglass_R_break","lightScaling":{}}],
+            /*hi*/["highbeam_filament","SPOTLIGHT","he5rr","he5r","he4rr",{"x":15,"y":35,"z":-15},{"x":0,"y":0,"z":0},{"x":0,"y":0,"z":0},0,0,0,1,{"baseTranslation":{"x":0.7,"y":0.42,"z":0.05},"lightRange":80,"lightBrightness":0.6,"lightOuterAngle":80,"flareScale":0.09,"deformGroup":"headlightglass_R_break","lightScaling":{}}]
+        ],
+        "torsionHydros": [
+            ["id1:","id2:","id3:","id4:"],
+            {"spring":10000,"damp":0,"deform":15000,"strength":20000},
+            ["he2r","he3r","he3rr","g1rr",{"factor":-3.145,"inRate":2.5,"outRate":2.5,"inputSource":"lowhighbeam"}]
+        ]
+        //beams are in the jbeam for UCP_Barstow_ConcealedHeadlightsGrille
+    },
+    "UCP_Barstow_RearBumperSignal_L_SideFacing":{
+        "information":{"authors":"Oaf","name":"Side-Facing Left Signal (UCP)","value":25},
+        "slotType":"UCP_Barstow_RearBumperSignal_L_SideFacing",
+        "flexbodies":[
+            ["mesh","[group]:","nonFlexMaterials"],
+            {"deformGroup":"bumpersignal_RL_break","deformMaterialBase":"barstow_lights","deformMaterialDamaged":"barstow_lights"},
+            ["barstow_bumpersignal_RL",["barstow_bumper_R"],[],{"deformSound":"event:>Destruction>Vehicle>Glass>glassbreaksound4","deformVolume":0.3}],
+            {"deformGroup":"bumpersignal_RL_break","deformMaterialBase":"barstow_glass","deformMaterialDamaged":"barstow_glass_dmg"},
+            ["barstow_bumpersignalglass_RL",["barstow_bumper_R"],[],{"deformSound":"event:>Destruction>Vehicle>Glass>glassbreaksound4","deformVolume":0.3}],
+            {"deformGroup":""}
+        ],
+        "props":[
+            ["func","mesh","idRef:","idX:","idY:","baseRotation","rotation","translation","min","max","offset","multiplier"],
+            {"lightInnerAngle":0,"lightOuterAngle":120,"lightRange":8,"lightColor":{"r":255,"g":0,"b":0,"a":255},"lightAttenuation":{"x":0,"y":1,"z":1},"lightCastShadows":false,"flareName":"vehicleBrakeLightFlare","flareScale":0.05,"cookieName":"art/special/BNG_light_cookie_headlight.dds","texSize":512,"shadowSoftness":0.1},
+            ["lowhighSignal_L_filament","SPOTLIGHT","rb4ll","rb2ll","rb3ll",{"x":180,"y":0,"z":0},{"x":0,"y":0,"z":0},{"x":0,"y":0,"z":0},0,0,0,1,{"baseTranslation":{"x":-0.34,"y":1.03,"z":0.01},"flareScale":0.02,"lightBrightness":0.03,"deformGroup":"bumpersignal_RL_break","lightScaling":{}}]
+        ]
+    },
+    "UCP_Barstow_RearBumperSignal_R_SideFacing":{
+        "information":{"authors":"Oaf","name":"Side-Facing Right Signal (UCP)","value":25},
+        "slotType":"UCP_Barstow_RearBumperSignal_R_SideFacing",
+        "flexbodies":[
+            ["mesh","[group]:","nonFlexMaterials"],
+            {"deformGroup":"bumpersignal_RR_break","deformMaterialBase":"barstow_lights","deformMaterialDamaged":"barstow_lights"},
+            ["barstow_bumpersignal_RR",["barstow_bumper_R"],[],{"deformSound":"event:>Destruction>Vehicle>Glass>glassbreaksound3","deformVolume":0.3}],
+            {"deformGroup":"bumpersignal_RR_break","deformMaterialBase":"barstow_glass","deformMaterialDamaged":"barstow_glass_dmg"},
+            ["barstow_bumpersignalglass_RR",["barstow_bumper_R"],[],{"deformSound":"event:>Destruction>Vehicle>Glass>glassbreaksound3","deformVolume":0.3}],
+            {"deformGroup":""}
+        ],
+        "props":[
+            ["func","mesh","idRef:","idX:","idY:","baseRotation","rotation","translation","min","max","offset","multiplier"],
+            {"lightInnerAngle":0,"lightOuterAngle":120,"lightRange":8,"lightColor":{"r":255,"g":0,"b":0,"a":255},"lightAttenuation":{"x":0,"y":1,"z":1},"lightCastShadows":false,"flareName":"vehicleBrakeLightFlare","flareScale":0.05,"cookieName":"art/special/BNG_light_cookie_headlight.dds","texSize":512,"shadowSoftness":0.1},
+            ["lowhighSignal_R_filament","SPOTLIGHT","rb4rr","rb2rr","rb3rr",{"x":0,"y":0,"z":0},{"x":0,"y":0,"z":0},{"x":0,"y":0,"z":0},0,0,0,1,{"baseTranslation":{"x":-0.34,"y":1.03,"z":-0.01},"flareScale":0.02,"lightBrightness":0.03,"deformGroup":"bumpersignal_RR_break","lightScaling":{}}]
+        ]
+    }
+}

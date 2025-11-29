@@ -1,0 +1,180 @@
+{
+    "UCP_Barstow_Interior":{
+        "information":{"authors":"Oaf","name":"Carpeted Interior (UCP)","value":2820},
+        "slotType":"UCP_Barstow_Interior",
+        "slots":[
+            ["type","default","description"],
+            ["skin_interior","barstow_skin_interior","Interior Color",{"coreSlot":true}],
+            ["gps","","Navigation Unit",{"nodeOffset":{"x":0.04,"y":-0.34,"z":0.96}}],
+            ["barstow_seat_FL","barstow_seat_FL","Driver Seat"],
+            ["barstow_seat_FR","barstow_seat_FR","Passenger Seat"],
+            ["barstow_seats_R","barstow_seats_R","Rear Bench Seats"],
+            ["barstow_trunk_load","","Trunk Load"],
+            ["barstow_shiftlight","","Shift Light"],
+            ["barstow_rollcage","","Roll Cage"],
+            ["UCP_Barstow_Dashboard","UCP_Barstow_Dashboard","Dashboard"/*,{"coreSlot":true}*/],
+            ["barstow_steer","barstow_steer","Steering Wheel"],
+            ["UCP_Barstow_BrakePedal","UCP_Barstow_BrakePedal","Brake Pedal"],
+            ["UCP_Barstow_ThrottlePedal","UCP_Barstow_ThrottlePedal","Throttle Pedal"],
+            ["UCP_Barstow_TurnSignalStalk","UCP_Barstow_TurnSignalStalk","Turn Signal Stalk"],
+            ["UCP_Barstow_RearViewMirror","UCP_Barstow_RearViewMirror","Rear-View Mirror"],
+            ["UCP_Barstow_Visor_L","UCP_Barstow_Visor_L","Left Sunvisor"],
+            ["UCP_Barstow_Visor_R","UCP_Barstow_Visor_R","Right Sunvisor"],
+            ["UCP_Barstow_ParkingBrake","UCP_Barstow_ParkingBrake","Parking Brake"]
+        ],
+        "flexbodies":[
+            ["mesh","[group]:","nonFlexMaterials"],
+            ["UCP_Barstow_Interior",["barstow_interior","barstow_floor","barstow_roof"]],
+            ["UCP_Barstow_TrunkLiner",["barstow_interior","barstow_floor"]],
+            ["UCP_Barstow_SteeringColumn",["barstow_interior"]]
+        ],
+        "torsionbars":[["id1:","id2:","id3:","id4:"],{"spring":20000,"damp":1,"deform":18000,"strength":28000},["int_strw","dshl","dsh","b10l"]]
+    },
+    "UCP_Barstow_Visor_L":{
+        "information":{"authors":"Oaf","name":"Left Sunvisor (UCP)","value":40},
+        "slotType":"UCP_Barstow_Visor_L",
+        "flexbodies":[["mesh","[group]:","nonFlexMaterials"],["UCP_Barstow_Visor_L",["barstow_roof"]]]
+    },
+    "UCP_Barstow_Visor_R":{
+        "information":{"authors":"Oaf","name":"Right Sunvisor (UCP)","value":40},
+        "slotType":"UCP_Barstow_Visor_R",
+        "flexbodies":[["mesh","[group]:","nonFlexMaterials"],["UCP_Barstow_Visor_R",["barstow_roof"]]]
+    },
+    "UCP_Barstow_RearViewMirror":{
+        "information":{"authors":"Oaf","name":"Rear-View Mirror (UCP)","value":100},
+        "slotType":"UCP_Barstow_RearViewMirror",
+        "flexbodies":[["mesh","[group]:","nonFlexMaterials"],["barstow_intmirror",["barstow_roof"]]],
+        "mirrors":[["mesh","idRef:","id1:","id2:"],["barstow_intmirror","r1","r1rr","r2",{"refBaseTranslation":{"x":0,"y":0.07,"z":-0.125},"baseRotationGlobal":{"x":4.9,"y":0,"z":15}}]]
+    },
+    "UCP_Barstow_BrakePedal":{
+        "information":{"authors":"Oaf","name":"Brake Pedal (UCP)","value":50},
+        "slotType":"UCP_Barstow_BrakePedal",
+        "props":[
+            ["func","mesh","idRef:","idX:","idY:","baseRotation","rotation","translation","min","max","offset","multiplier"],
+            ["brake","barstow_brakepedal","b2l","b2r","b11l",{"x":5,"y":0,"z":180},{"x":-25,"y":0,"z":0},{"x":0,"y":0,"z":0},0,1,0,1]
+        ]
+    },
+    "UCP_Barstow_ThrottlePedal":{
+        "information":{"authors":"Oaf","name":"Throttle Pedal (UCP)","value":50},
+        "slotType":"UCP_Barstow_ThrottlePedal",
+        "props":[
+            ["func","mesh","idRef:","idX:","idY:","baseRotation","rotation","translation","min","max","offset","multiplier"],
+            ["throttle","barstow_gaspedal","b2l","b2r","b11l",{"x":0,"y":0,"z":180},{"x":-25,"y":0,"z":0},{"x":0,"y":0,"z":0},0,1,0,1]
+        ]
+    },
+    "UCP_Barstow_ParkingBrake":{
+        "information":{"authors":"Oaf","name":"Dashboard-Mounted Parking Brake (UCP)","value":50},
+        "slotType":"UCP_Barstow_ParkingBrake",
+        "props":[["func","mesh","idRef:","idX:","idY:","baseRotation","rotation","translation","min","max","offset","multiplier"],["parkingbrake","barstow_parkingbrake","b2l","b2r","b11l",{"x":-12,"y":0,"z":180},{"x":0,"y":0,"z":0},{"x":0,"y":0,"z":-0.03},0,1,0,1]],
+        "flexbodies":[["mesh","[group]:","nonFlexMaterials"],["UCP_Barstow_PBrakeBracket",["barstow_interior"]]]
+    },
+    "UCP_Barstow_ParkingBrake_FloorMounted_Factory":{
+        "information":{"authors":"Oaf","name":"Floor-Mounted Parking Brake (UCP)","value":50},
+        "slotType":"UCP_Barstow_ParkingBrake",
+        "props":[
+            ["func","mesh","idRef:","idX:","idY:","baseRotation","rotation","translation","min","max","offset","multiplier"],
+            ["parkingbrake","UCP_Barstow_ParkingBrake_FloorMounted_Factory","b2l","b2r","b11l",{"x":-12,"y":0,"z":180},{"x":0,"y":0,"z":0},{"x":0,"y":0,"z":-0.03},0,1,0,1]
+        ]
+    },
+    "UCP_Barstow_TurnSignalStalk":{
+        "information":{"authors":"Oaf","name":"Turn Signal Stalk (UCP)","value":50},
+        "slotType":"UCP_Barstow_TurnSignalStalk",
+        "props":[
+            ["func","mesh","idRef:","idX:","idY:","baseRotation","rotation","translation","min","max","offset","multiplier"],
+            ["turnsignal","barstow_signalstalk","int_strw","dshl","dsh",{"x":180,"y":90,"z":180},{"x":0,"y":0,"z":15},{"x":0,"y":0,"z":0},-1000,1000,0,1]
+        ]
+    },
+    "UCP_Barstow_Dashboard":{
+        "information":{"authors":"Oaf","name":"Dashboard (UCP)","value":100},
+        "slotType":"UCP_Barstow_Dashboard",
+        "flexbodies":[["mesh","[group]:","nonFlexMaterials"],["UCP_Barstow_Dash",["barstow_interior"]]],
+        "slots":[
+            ["type","default","description"],
+            ["UCP_Barstow_Guage_Fuel","UCP_Barstow_Guage_Fuel","Fuel Guage"],
+            ["UCP_Barstow_Guage_Oil","UCP_Barstow_Guage_Oil","Oil Pressure Guage"],
+            ["UCP_Barstow_Guage_RPM","UCP_Barstow_Guage_RPM","Tachometer"],
+            ["UCP_Barstow_Guage_Amps","UCP_Barstow_Guage_Amps","Battery Guage"],
+            ["UCP_Barstow_Guage_Temp","UCP_Barstow_Guage_Temp","Temperature Guage"],
+            ["UCP_Barstow_Guage_TachometerAndSpeedometer","UCP_Barstow_Guage_TachometerAndSpeedometer","Speedometer"]
+        ]
+    },
+    "UCP_Barstow_Guage_Fuel":{
+        "information":{"authors":"Oaf","name":"Fuel Guage (UCP)","value":30},
+        "slotType":"UCP_Barstow_Guage_Fuel",
+        "flexbodies":[["mesh","[group]:","nonFlexMaterials"],["UCP_Barstow_Guage_Fuel",["barstow_interior"]]],
+        "props":[
+            ["func","mesh","idRef:","idX:","idY:","baseRotation","rotation","translation","min","max","offset","multiplier"],
+            ["fuel","barstow_needle_fuel","b2l","b2r","b11l",{"x":-9,"y":0,"z":180},{"x":0,"y":90,"z":0},{"x":0,"y":0,"z":0},0,1,-0.5,1]
+        ]
+    },
+    "UCP_Barstow_Guage_Oil":{
+        "information":{"authors":"Oaf","name":"Oil Pressure Guage (UCP)","value":30},
+        "slotType":"UCP_Barstow_Guage_Oil",
+        "flexbodies":[["mesh","[group]:","nonFlexMaterials"],["UCP_Barstow_Guage_Oil",["barstow_interior"]]],
+        "props":[
+            ["func","mesh","idRef:","idX:","idY:","baseRotation","rotation","translation","min","max","offset","multiplier"],
+            ["oiltemp","barstow_needle_oil","b2l","b2r","b11l",{"x":-9,"y":0,"z":180},{"x":0,"y":1,"z":0},{"x":0,"y":0,"z":0},20,130,-75,1]
+        ]
+    },
+    "UCP_Barstow_Guage_RPM":{
+        "information":{"authors":"Oaf","name":"Tachometer (UCP)","value":30},
+        "slotType":"UCP_Barstow_Guage_RPM",
+        "flexbodies":[["mesh","[group]:","nonFlexMaterials"],["UCP_Barstow_Guage_RPM",["barstow_interior"]]],
+        "props":[
+            ["func","mesh","idRef:","idX:","idY:","baseRotation","rotation","translation","min","max","offset","multiplier"],
+            ["rpm","barstow_needle_tacho","b2l","b2r","b11l",{"x":-9,"y":0,"z":180},{"x":0,"y":-0.045,"z":0},{"x":0,"y":0,"z":0},0,5000,-2500,1]
+        ]
+    },
+    "UCP_Barstow_Guage_Amps":{
+        "information":{"authors":"Oaf","name":"Battery Guage (UCP)","value":30},
+        "slotType":"UCP_Barstow_Guage_Amps",
+        "flexbodies":[["mesh","[group]:","nonFlexMaterials"],["UCP_Barstow_Guage_Amps",["barstow_interior"]]],
+        "props":[
+            ["func","mesh","idRef:","idX:","idY:","baseRotation","rotation","translation","min","max","offset","multiplier"],
+            ["amps","barstow_needle_amps","b2l","b2r","b11l",{"x":-9,"y":0,"z":180},{"x":0,"y":0,"z":0},{"x":0,"y":0,"z":0},0,1,0,1]
+        ]
+    },
+    "UCP_Barstow_Guage_Temp":{
+        "information":{"authors":"Oaf","name":"Temperature Guage (UCP)","value":30},
+        "slotType":"UCP_Barstow_Guage_Temp",
+        "flexbodies":[["mesh","[group]:","nonFlexMaterials"],["UCP_Barstow_Guage_Temp",["barstow_interior"]]],
+        "props":[
+            ["func","mesh","idRef:","idX:","idY:","baseRotation","rotation","translation","min","max","offset","multiplier"],
+            ["watertemp","barstow_needle_water","b2l","b2r","b11l",{"x":-9,"y":0,"z":180},{"x":0,"y":1.5,"z":0},{"x":0,"y":0,"z":0},60,120,-90,1]
+        ]
+    },
+    "UCP_Barstow_Guage_TachometerAndSpeedometer":{//this name is a mistake, whatever
+        "information":{"authors":"Oaf","name":"Odometer/Speedometer (UCP)","value":50},
+        "slotType":"UCP_Barstow_Guage_TachometerAndSpeedometer",
+        "flexbodies":[["mesh","[group]:","nonFlexMaterials"],["UCP_Barstow_Guage_TachometerAndSpeedometer",["barstow_interior"]]],
+        "props":[
+            ["func","mesh","idRef:","idX:","idY:","baseRotation","rotation","translation","min","max","offset","multiplier"],
+            ["wheelspeed","barstow_needle_speedo","b2l","b2r","b11l",{"x":-9,"y":0,"z":180},{"x":0,"y":-5.1,"z":0},{"x":0,"y":0,"z":0},0,62.6,-31,1]
+        ],
+        "controller":[["fileName"],["gauges/analogOdometer",{"name":"analogOdometer"}]],
+        "analogOdometer":{
+            "configuration":{
+                "materialName":"@generic_gauges_odo",
+                "htmlPath":"local://local/vehicles/common/analogOdo.html",
+                "displayWidth":512,
+                "displayHeight":32,
+                "odometerDigits":7,
+                "odometerHasDecimalSeparator":true,
+                "tripHasDecimalSeparator":true,
+                "unit":"imperial",
+                "floatStyle":{"color":"black"},
+                "bodyStyle":{
+                    "background":"url('/vehicles/common/odometer_analog_b.cef_color.png')",
+                    "font-family":"OpenSans",
+                    "font-size":"28px",
+                    "color":"white",
+                    "letter-spacing":"15.5px",
+                    "margin":"-4.5px 10.5px",
+                    "transform":"scaleX(1.26)",
+                    "transform-origin":"left"
+                },
+                "tripDivStyle":{"margin-left":"-3px","position":"fixed","letter-spacing":"32px"}
+            }
+        }
+    }
+}

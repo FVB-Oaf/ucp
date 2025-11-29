@@ -1,0 +1,481 @@
+{
+    // HUB PARTS
+    "UCP_Barstow_Springs_F":{
+        "information":{"authors":"Oaf","name":"Front Springs (UCP)","value":0},
+        "slotType":"barstow_spring_F",
+        "slots":[
+            ["type","default","description"],
+            ["UCP_Barstow_Spring_FL","UCP_Barstow_Spring_FL","Front Left Spring"],
+            ["UCP_Barstow_Spring_FR","UCP_Barstow_Spring_FR","Front Right Spring"]
+        ]
+    },
+    "UCP_Barstow_Shocks_F":{
+        "information":{"authors":"Oaf","name":"Front Shocks (UCP)","value":0},
+        "slotType":"barstow_shock_F",
+        "slots":[
+            ["type","default","description"],
+            ["UCP_Barstow_Shock_FL","UCP_Barstow_Shock_FL","Front Left Shock"],
+            ["UCP_Barstow_Shock_FR","UCP_Barstow_Shock_FR","Front Right Shock"]
+        ]
+    },
+    "UCP_Barstow_LeafSprings_R":{
+        "information":{"authors":"Oaf","name":"Rear Leaf Springs (UCP)","value":0},
+        "slotType":"barstow_leaf_R",
+        "slots":[
+            ["type","default","description"],
+            ["UCP_Barstow_LeafSpring_RL","UCP_Barstow_LeafSpring_RL","Rear Left Leaf Spring"],
+            ["UCP_Barstow_LeafSpring_RR","UCP_Barstow_LeafSpring_RR","Rear Right Leaf Spring"]
+        ]
+    },
+    // PARTS
+    "UCP_Barstow_Spring_FL":{
+        "information":{"authors":"Oaf","name":"Front Left Spring (UCP)","value":75},
+        "slotType":"UCP_Barstow_Spring_FL",
+        "flexbodies":[["mesh","[group]:","nonFlexMaterials"],["UCP_Barstow_Spring_FL",["barstow_shockbottom_F","barstow_shocktop_F","barstow_lowermounts_b_F","barstow_lowerarm_F"]]],
+        "beams":[
+            ["id1:","id2:"],
+            {"beamPrecompression":1,"beamType":"|NORMAL","beamDeform":20300,"beamStrength":153000,"beamSpring":51000,"beamDamp":10},
+            ["fh4l","fs1l",{"precompressionRange":0.11,"beamPrecompressionTime":0.02,"soundFile":"event:>Vehicle>Suspension>car_modn_med_01>spring_compress_01","colorFactor":0.4,"attackFactor":30,"volumeFactor":1.5,"decayFactor":6,"noiseFactor":0.01,"pitchFactor":0.2,"maxStress":1400}],
+            {"beamPrecompression":1,"beamType":"|NORMAL","beamLongBound":1,"beamShortBound":1}
+        ]
+    },
+    "UCP_Barstow_Spring_FR":{
+        "information":{"authors":"Oaf","name":"Front Right Spring (UCP)","value":75},
+        "slotType":"UCP_Barstow_Spring_FR",
+        "flexbodies":[["mesh","[group]:","nonFlexMaterials"],["UCP_Barstow_Spring_FR",["barstow_shockbottom_F","barstow_shocktop_F","barstow_lowermounts_b_F","barstow_lowerarm_F"]]],
+        "beams":[
+            ["id1:","id2:"],
+            {"beamPrecompression":1,"beamType":"|NORMAL","beamDeform":20300,"beamStrength":153000,"beamSpring":51000,"beamDamp":10},
+            ["fh4r","fs1r",{"precompressionRange":0.11,"beamPrecompressionTime":0.02,"soundFile":"event:>Vehicle>Suspension>car_modn_med_01>spring_compress_01","colorFactor":0.4,"attackFactor":30,"volumeFactor":1.5,"decayFactor":6,"noiseFactor":0.01,"pitchFactor":0.2,"maxStress":1400}],//acting at wishbone
+            {"beamPrecompression":1,"beamType":"|NORMAL","beamLongBound":1,"beamShortBound":1}
+        ]
+    },
+    "UCP_Barstow_Spring_FL_HeavyDuty":{
+        "information":{"authors":"Oaf","name":"Heavy Duty Front Left Spring (UCP)","value":100},
+        "slotType":"UCP_Barstow_Spring_FL",
+        "flexbodies":[["mesh","[group]:","nonFlexMaterials"],["UCP_Barstow_Spring_FL",["barstow_shockbottom_F","barstow_shocktop_F","barstow_lowermounts_b_F","barstow_lowerarm_F"]]],
+        "beams":[
+            ["id1:","id2:"],
+            {"beamPrecompression":1,"beamType":"|NORMAL","beamDeform":25300,"beamStrength":153000,"beamSpring":79000,"beamDamp":10},
+            ["fh4l","fs1l",{"precompressionRange":0.078,"beamPrecompressionTime":0.02,"soundFile":"event:>Vehicle>Suspension>car_modn_med_01>spring_compress_01","colorFactor":0.4,"attackFactor":30,"volumeFactor":1.5,"decayFactor":6,"noiseFactor":0.01,"pitchFactor":0.3,"maxStress":1600}],
+            {"beamPrecompression":1,"beamType":"|NORMAL","beamLongBound":1,"beamShortBound":1}
+        ]
+    },
+    "UCP_Barstow_Spring_FR_HeavyDuty":{
+        "information":{"authors":"Oaf","name":"Heavy Duty Front Right Spring (UCP)","value":100},
+        "slotType":"UCP_Barstow_Spring_FR",
+        "flexbodies":[["mesh","[group]:","nonFlexMaterials"],["UCP_Barstow_Spring_FL",["barstow_shockbottom_F","barstow_shocktop_F","barstow_lowermounts_b_F","barstow_lowerarm_F"]]],
+        "beams":[
+            ["id1:","id2:"],
+            {"beamPrecompression":1,"beamType":"|NORMAL","beamDeform":25300,"beamStrength":153000,"beamSpring":79000,"beamDamp":10},
+            ["fh4r","fs1r",{"precompressionRange":0.078,"beamPrecompressionTime":0.02,"soundFile":"event:>Vehicle>Suspension>car_modn_med_01>spring_compress_01","colorFactor":0.4,"attackFactor":30,"volumeFactor":1.5,"decayFactor":6,"noiseFactor":0.01,"pitchFactor":0.3,"maxStress":1600}],//acting at wishbone
+            {"beamPrecompression":1,"beamType":"|NORMAL","beamLongBound":1,"beamShortBound":1}
+        ]
+    },
+    "UCP_Barstow_Spring_FL_Race":{
+        "information":{"authors":"Oaf","name":"Race Front Left Spring (UCP)","value":200},
+        "slotType":"UCP_Barstow_Spring_FL",
+        "flexbodies":[["mesh","[group]:","nonFlexMaterials"],["UCP_Barstow_Spring_FL",["barstow_shockbottom_F","barstow_shocktop_F","barstow_lowermounts_b_F","barstow_lowerarm_F"]]],
+        "variables":[
+            ["name","type","unit","category","default","min","max","title","description"],
+            ["$springheight_FL","range","+m","Suspension",0,-0.06,0.04,"Spring Height","Raise or lower the suspension height",{"stepDis":0.005,"subCategory":"Front Left"}],
+            ["$spring_FL","range","N/m","Suspension",151000,50000,225000,"Spring Rate","Spring stiffness",{"stepDis":1000,"subCategory":"Front Left"}]
+        ],
+        "beams":[
+            ["id1:","id2:"],
+            {"beamType":"|NORMAL","beamDeform":20300,"beamStrength":153000,"beamSpring":"$spring_FL","beamDamp":10},
+            ["fh4l","fs1l",{"beamPrecompression":"$=$rideheight_FL","precompressionRange":"$=case($rideheight_FL==nil,($springheight_FL+0.04)*0.6,'')","soundFile":"event:>Vehicle>Suspension>car_modn_med_01>spring_compress_01","colorFactor":0.4,"attackFactor":30,"volumeFactor":1.9,"decayFactor":9,"noiseFactor":0.01,"pitchFactor":1,"maxStress":3800}],
+            {"beamPrecompression":1,"beamType":"|NORMAL","beamLongBound":1,"beamShortBound":1}
+        ]
+    },
+    "UCP_Barstow_Spring_FR_Race":{
+        "information":{"authors":"Oaf","name":"Race Front Right Spring (UCP)","value":200},
+        "slotType":"UCP_Barstow_Spring_FR",
+        "flexbodies":[["mesh","[group]:","nonFlexMaterials"],["UCP_Barstow_Spring_FR",["barstow_shockbottom_F","barstow_shocktop_F","barstow_lowermounts_b_F","barstow_lowerarm_F"]]],
+        "variables":[
+            ["name","type","unit","category","default","min","max","title","description"],
+            ["$springheight_FR","range","+m","Suspension",0,-0.06,0.04,"Spring Height","Raise or lower the suspension height",{"stepDis":0.005,"subCategory":"Front Right"}],
+            ["$spring_FR","range","N/m","Suspension",151000,50000,225000,"Spring Rate","Spring stiffness",{"stepDis":1000,"subCategory":"Front Right"}]
+        ],
+        "beams":[
+            ["id1:","id2:"],
+            {"beamType":"|NORMAL","beamDeform":20300,"beamStrength":153000,"beamSpring":"$spring_FR","beamDamp":10},
+            ["fh4r","fs1r",{"beamPrecompression":"$=$rideheight_FR","precompressionRange":"$=case($rideheight_FR==nil,($springheight_FR+0.04)*0.6,'')","soundFile":"event:>Vehicle>Suspension>car_modn_med_01>spring_compress_01","colorFactor":0.4,"attackFactor":30,"volumeFactor":1.9,"decayFactor":9,"noiseFactor":0.01,"pitchFactor":1,"maxStress":3800}],
+            {"beamPrecompression":1,"beamType":"|NORMAL","beamLongBound":1,"beamShortBound":1}
+        ]
+    },
+    "UCP_Barstow_Spring_FL_Rally":{
+        "information":{"authors":"Oaf","name":"Rally Front Left Spring (UCP)","value":200},
+        "slotType":"UCP_Barstow_Spring_FL",
+        "flexbodies":[["mesh","[group]:","nonFlexMaterials"],["UCP_Barstow_Spring_FL",["barstow_shockbottom_F","barstow_shocktop_F","barstow_lowermounts_b_F","barstow_lowerarm_F"]]],
+        "variables":[
+            ["name","type","unit","category","default","min","max","title","description"],
+            ["$springheight_FL","range","+m","Suspension",0,-0.04,0.06,"Spring Height","Raise or lower the suspension height",{"stepDis":0.005,"subCategory":"Front Left"}],
+            ["$spring_FL","range","N/m","Suspension",90000,50000,200000,"Spring Rate","Spring stiffness",{"stepDis":500,"subCategory":"Front Left"}]
+        ],
+        "beams":[
+            ["id1:","id2:"],
+            {"beamType":"|NORMAL","beamDeform":25300,"beamStrength":153000,"beamSpring":"$spring_FL","beamDamp":10},
+            ["fh4l","fs1l",{"precompressionRange":"$=($springheight_FL+0.11)*0.65","soundFile":"event:>Vehicle>Suspension>car_modn_med_01>spring_compress_01","colorFactor":0.4,"attackFactor":30,"volumeFactor":1.6,"decayFactor":6,"noiseFactor":0.01,"pitchFactor":0.7,"maxStress":3800}],
+            {"beamPrecompression":1,"beamType":"|NORMAL","beamLongBound":1,"beamShortBound":1}
+        ]
+    },
+    "UCP_Barstow_Spring_FR_Rally":{
+        "information":{"authors":"Oaf","name":"Rally Front Left Spring (UCP)","value":200},
+        "slotType":"UCP_Barstow_Spring_FR",
+        "flexbodies":[["mesh","[group]:","nonFlexMaterials"],["UCP_Barstow_Spring_FR",["barstow_shockbottom_F","barstow_shocktop_F","barstow_lowermounts_b_F","barstow_lowerarm_F"]]],
+        "variables":[
+            ["name","type","unit","category","default","min","max","title","description"],
+            ["$springheight_FR","range","+m","Suspension",0,-0.04,0.06,"Spring Height","Raise or lower the suspension height",{"stepDis":0.005,"subCategory":"Front Right"}],
+            ["$spring_FR","range","N/m","Suspension",90000,50000,200000,"Spring Rate","Spring stiffness",{"stepDis":500,"subCategory":"Front Right"}]
+        ],
+        "beams":[
+            ["id1:","id2:"],
+            {"beamType":"|NORMAL","beamDeform":25300,"beamStrength":153000,"beamSpring":"$spring_F","beamDamp":10},
+            ["fh4r","fs1r",{"precompressionRange":"$=($springheight_FR+0.11)*0.65","soundFile":"event:>Vehicle>Suspension>car_modn_med_01>spring_compress_01","colorFactor":0.4,"attackFactor":30,"volumeFactor":1.6,"decayFactor":6,"noiseFactor":0.01,"pitchFactor":0.7,"maxStress":3800}],
+            {"beamPrecompression":1,"beamType":"|NORMAL","beamLongBound":1,"beamShortBound":1}
+        ]
+    },
+    "UCP_Barstow_Shock_FL":{
+        "information":{
+            "authors":"Oaf",
+            "name":"Front Left Shock (UCP)",
+            "value":100
+        },
+        "slotType":"UCP_Barstow_Shock_FL",
+        "flexbodies":[["mesh","[group]:","nonFlexMaterials"],["UCP_Barstow_Shock_FL",["barstow_shockbottom_F","barstow_shocktop_F","barstow_lowermounts_b_F","barstow_lowerarm_F"]]],
+        "beams":[
+            ["id1:","id2:"],
+            {"beamPrecompression":1,"beamType":"|BOUNDED","beamLongBound":1,"beamShortBound":1,"beamDeform":25300,"beamStrength":153000,"beamLimitSpring":0,"beamLimitDamp":0,"beamSpring":0,"beamDamp":5400},
+            ["fh4l","fs1l",{"beamDampFast":2600,"beamDampRebound":9000,"beamDampReboundFast":4500,"beamDampVelocitySplit":0.15,"dampCutoffHz":500}],
+            {"beamSpring":0,"beamDamp":0,"beamLimitSpring":251000,"beamLimitDamp":5000},
+            ["fh1l","fs1l",{"longBoundRange":0.06,"shortBoundRange":0.065,"boundZone":0.04,"beamLimitDampRebound":1000,"dampCutoffHz":500}],
+            {"beamPrecompression":1,"beamType":"|NORMAL","beamLongBound":1,"beamShortBound":1}
+        ]
+    },
+    "UCP_Barstow_Shock_FR":{
+        "information":{
+            "authors":"Oaf",
+            "name":"Front Right Shock (UCP)",
+            "value":100
+        },
+        "slotType":"UCP_Barstow_Shock_FR",
+        "flexbodies":[["mesh","[group]:","nonFlexMaterials"],["UCP_Barstow_Shock_FR",["barstow_shockbottom_F","barstow_shocktop_F","barstow_lowermounts_b_F","barstow_lowerarm_F"]]],
+        "beams":[
+            ["id1:","id2:"],
+            {"beamPrecompression":1,"beamType":"|BOUNDED","beamLongBound":1,"beamShortBound":1,"beamDeform":25300,"beamStrength":153000,"beamLimitSpring":0,"beamLimitDamp":0,"beamSpring":0,"beamDamp":5400},
+            ["fh4r","fs1r",{"beamDampFast":2600,"beamDampRebound":9000,"beamDampReboundFast":4500,"beamDampVelocitySplit":0.15,"dampCutoffHz":500}],
+            {"beamSpring":0,"beamDamp":0,"beamLimitSpring":251000,"beamLimitDamp":5000},
+            ["fh1r","fs1r",{"longBoundRange":0.06,"shortBoundRange":0.065,"boundZone":0.04,"beamLimitDampRebound":1000,"dampCutoffHz":500}],
+            {"beamPrecompression":1,"beamType":"|NORMAL","beamLongBound":1,"beamShortBound":1}
+        ]
+    },
+    "UCP_Barstow_Shock_FL_HeavyDuty":{
+        "information":{
+            "authors":"Oaf",
+            "name":"Heavy Duty Front Left Shock (UCP)",
+            "value":125
+        },
+        "slotType":"UCP_Barstow_Shock_FL",
+        "flexbodies":[["mesh","[group]:","nonFlexMaterials"],["UCP_Barstow_Shock_FL",["barstow_shockbottom_F","barstow_shocktop_F","barstow_lowermounts_b_F","barstow_lowerarm_F"]]],
+        "beams":[
+            ["id1:","id2:"],
+            {"beamPrecompression":1,"beamType":"|BOUNDED","beamLongBound":1,"beamShortBound":1,"beamDeform":27000,"beamStrength":170000,"beamLimitSpring":0,"beamLimitDamp":0,"beamSpring":0,"beamDamp":6000},
+            ["fh4l","fs1l",{"beamDampFast":3000,"beamDampRebound":11000,"beamDampReboundFast":5500,"beamDampVelocitySplit":0.15,"dampCutoffHz":500}],
+            {"beamSpring":0,"beamDamp":0,"beamLimitSpring":251000,"beamLimitDamp":5000},
+            ["fh1l","fs1l",{"longBoundRange":0.06,"shortBoundRange":0.065,"boundZone":0.04,"beamLimitDampRebound":1000,"dampCutoffHz":500}],
+            {"beamPrecompression":1,"beamType":"|NORMAL","beamLongBound":1,"beamShortBound":1}
+        ]
+    },
+    "UCP_Barstow_Shock_FR_HeavyDuty":{
+        "information":{
+            "authors":"Oaf",
+            "name":"Heavy Duty Front Right Shock (UCP)",
+            "value":125
+        },
+        "slotType":"UCP_Barstow_Shock_FR",
+        "flexbodies":[["mesh","[group]:","nonFlexMaterials"],["UCP_Barstow_Shock_FR",["barstow_shockbottom_F","barstow_shocktop_F","barstow_lowermounts_b_F","barstow_lowerarm_F"]]],
+        "beams":[
+            ["id1:","id2:"],
+            {"beamPrecompression":1,"beamType":"|BOUNDED","beamLongBound":1,"beamShortBound":1,"beamDeform":27000,"beamStrength":170000,"beamLimitSpring":0,"beamLimitDamp":0,"beamSpring":0,"beamDamp":6000},
+            ["fh4r","fs1r",{"beamDampFast":3000,"beamDampRebound":11000,"beamDampReboundFast":5500,"beamDampVelocitySplit":0.15,"dampCutoffHz":500}],
+            {"beamSpring":0,"beamDamp":0,"beamLimitSpring":251000,"beamLimitDamp":5000},
+            ["fh1r","fs1r",{"longBoundRange":0.06,"shortBoundRange":0.065,"boundZone":0.04,"beamLimitDampRebound":1000,"dampCutoffHz":500}],
+            {"beamPrecompression":1,"beamType":"|NORMAL","beamLongBound":1,"beamShortBound":1}
+        ]
+    },
+    "UCP_Barstow_Shock_FL_Race":{
+        "information":{
+            "authors":"Oaf",
+            "name":"Race Front Left Shock (UCP)",
+            "value":225
+        },
+        "slotType":"UCP_Barstow_Shock_FL",
+        "flexbodies":[["mesh","[group]:","nonFlexMaterials"],["UCP_Barstow_Shock_FL",["barstow_shockbottom_F","barstow_shocktop_F","barstow_lowermounts_b_F","barstow_lowerarm_F"]]],
+        "variables":[
+            ["name","type","unit","category","default","min","max","title","description"],
+            ["$damp_bump_FL","range","N/m/s","Suspension",12000,500,20000,"Bump Damping","Damper rate in compression",{"stepDis":100,"subCategory":"Front Left"}],
+            ["$damp_rebound_FL","range","N/m/s","Suspension",36000,500,40000,"Rebound Damping","Damper rate in extension",{"stepDis":100,"subCategory":"Front Left"}]
+        ],
+        "beams":[
+            ["id1:","id2:"],
+            {"beamPrecompression":1,"beamType":"|BOUNDED","beamLongBound":1,"beamShortBound":1,"beamDeform":25300,"beamStrength":153000,"beamLimitSpring":0,"beamLimitDamp":0,"beamSpring":0,"beamDamp":"$damp_bump_FL"},
+            ["fh4l","fs1l",{"beamDampRebound":"$damp_rebound_FL","beamDampVelocitySplit":0.25,"beamDampFast":"$=$damp_bump_FL/3","beamDampReboundFast":"$=$damp_rebound_FL/3","dampCutoffHz":400}],
+            {"beamSpring":0,"beamDamp":0,"beamLimitSpring":171000,"beamLimitDamp":4000},
+            ["fh1l","fs1l",{"longBoundRange":0.04,"shortBoundRange":0.065,"boundZone":0.02,"beamLimitDampRebound":1000,"dampCutoffHz":500}],
+            {"beamPrecompression":1,"beamType":"|NORMAL","beamLongBound":1,"beamShortBound":1}
+        ]
+    },
+    "UCP_Barstow_Shock_FR_Race":{
+        "information":{
+            "authors":"Oaf",
+            "name":"Race Front Right Shock (UCP)",
+            "value":225
+        },
+        "slotType":"UCP_Barstow_Shock_FR",
+        "flexbodies":[["mesh","[group]:","nonFlexMaterials"],["UCP_Barstow_Shock_FR",["barstow_shockbottom_F","barstow_shocktop_F","barstow_lowermounts_b_F","barstow_lowerarm_F"]]],
+        "variables":[
+            ["name","type","unit","category","default","min","max","title","description"],
+            ["$damp_bump_FR","range","N/m/s","Suspension",12000,500,20000,"Bump Damping","Damper rate in compression",{"stepDis":100,"subCategory":"Front Right"}],
+            ["$damp_rebound_FR","range","N/m/s","Suspension",36000,500,40000,"Rebound Damping","Damper rate in extension",{"stepDis":100,"subCategory":"Front Right"}]
+        ],
+        "beams":[
+            ["id1:","id2:"],
+            {"beamPrecompression":1,"beamType":"|BOUNDED","beamLongBound":1,"beamShortBound":1,"beamDeform":25300,"beamStrength":153000,"beamLimitSpring":0,"beamLimitDamp":0,"beamSpring":0,"beamDamp":"$damp_bump_FR"},
+            ["fh4r","fs1r",{"beamDampRebound":"$damp_rebound_FR","beamDampVelocitySplit":0.25,"beamDampFast":"$=$damp_bump_FR/3","beamDampReboundFast":"$=$damp_rebound_FR/3","dampCutoffHz":400}],
+            {"beamSpring":0,"beamDamp":0,"beamLimitSpring":171000,"beamLimitDamp":4000},
+            ["fh1r","fs1r",{"longBoundRange":0.04,"shortBoundRange":0.065,"boundZone":0.02,"beamLimitDampRebound":1000,"dampCutoffHz":500}],
+            {"beamPrecompression":1,"beamType":"|NORMAL","beamLongBound":1,"beamShortBound":1}
+        ]
+    },
+    "UCP_Barstow_Shock_FL_Rally":{
+        "information":{
+            "authors":"Oaf",
+            "name":"Rally Front Left Shock (UCP)",
+            "value":225
+        },
+        "slotType":"UCP_Barstow_Shock_FL",
+        "flexbodies":[["mesh","[group]:","nonFlexMaterials"],["UCP_Barstow_Shock_FL",["barstow_shockbottom_F","barstow_shocktop_F","barstow_lowermounts_b_F","barstow_lowerarm_F"]]],
+        "variables":[
+            ["name","type","unit","category","default","min","max","title","description"],
+            ["$damp_bump_FL","range","N/m/s","Suspension",14000,500,20000,"Bump Damping","Damper rate in compression",{"stepDis":100,"subCategory":"Front Left"}],
+            ["$damp_bump_FL_fast","range","N/m/s","Suspension",23000,500,40000,"Fast Bump Damping","Damper rate in fast compression",{"stepDis":100,"subCategory":"Front Left"}],
+            ["$damp_rebound_FL","range","N/m/s","Suspension",18000,500,20000,"Rebound Damping","Damper rate in extension",{"stepDis":100,"subCategory":"Front Left"}]
+        ],
+        "beams":[
+            ["id1:","id2:"],
+            {"beamPrecompression":1,"beamType":"|BOUNDED","beamLongBound":1,"beamShortBound":1,"beamDeform":108800,"beamStrength":136000,"beamLimitSpring":0,"beamLimitDamp":0,"beamSpring":0,"beamDamp":"$damp_bump_FL"},
+            ["fh4l","fs1l",{"beamDampRebound":"$damp_rebound_FL","beamDampVelocitySplit":1,"beamDampFast":"$=$damp_bump_FL_fast","beamDampReboundFast":"$=$damp_rebound_FL","dampCutoffHz":500}],
+            {"beamSpring":0,"beamDamp":0,"beamLimitSpring":171000,"beamLimitDamp":4000},
+            ["fh1l","fs1l",{"longBoundRange":0.08,"shortBoundRange":0.065,"boundZone":0.04,"beamLimitDampRebound":1000,"dampCutoffHz":500}],
+            {"beamPrecompression":1,"beamType":"|NORMAL","beamLongBound":1,"beamShortBound":1}
+        ]
+    },
+    "UCP_Barstow_Shock_FR_Rally":{
+        "information":{
+            "authors":"Oaf",
+            "name":"Rally Front Left Shock (UCP)",
+            "value":225
+        },
+        "slotType":"UCP_Barstow_Shock_FR",
+        "flexbodies":[["mesh","[group]:","nonFlexMaterials"],["UCP_Barstow_Shock_FR",["barstow_shockbottom_F","barstow_shocktop_F","barstow_lowermounts_b_F","barstow_lowerarm_F"]]],
+        "variables":[
+            ["name","type","unit","category","default","min","max","title","description"],
+            ["$damp_bump_FR","range","N/m/s","Suspension",14000,500,20000,"Bump Damping","Damper rate in compression",{"stepDis":100,"subCategory":"Front Right"}],
+            ["$damp_bump_FR_fast","range","N/m/s","Suspension",23000,500,40000,"Fast Bump Damping","Damper rate in fast compression",{"stepDis":100,"subCategory":"Front Right"}],
+            ["$damp_rebound_FR","range","N/m/s","Suspension",18000,500,20000,"Rebound Damping","Damper rate in extension",{"stepDis":100,"subCategory":"Front Right"}]
+        ],
+        "beams":[
+            ["id1:","id2:"],
+            {"beamPrecompression":1,"beamType":"|BOUNDED","beamLongBound":1,"beamShortBound":1,"beamDeform":108800,"beamStrength":136000,"beamLimitSpring":0,"beamLimitDamp":0,"beamSpring":0,"beamDamp":"$damp_bump_FR"},
+            ["fh4r","fs1r",{"beamDampRebound":"$damp_rebound_FR","beamDampVelocitySplit":1,"beamDampFast":"$=$damp_bump_FR_fast","beamDampReboundFast":"$=$damp_rebound_FR","dampCutoffHz":500}],
+            {"beamSpring":0,"beamDamp":0,"beamLimitSpring":171000,"beamLimitDamp":4000},
+            ["fh1r","fs1r",{"longBoundRange":0.08,"shortBoundRange":0.065,"boundZone":0.04,"beamLimitDampRebound":1000,"dampCutoffHz":500}],
+            {"beamPrecompression":1,"beamType":"|NORMAL","beamLongBound":1,"beamShortBound":1}
+        ]
+    },
+    "UCP_Barstow_LeafSpring_RL":{
+        "information":{"authors":"Oaf","name":"Rear Left Leaf Spring (UCP)","value":75},
+        "slotType":"UCP_Barstow_LeafSpring_RL",
+        "flexbodies":[
+            ["mesh","[group]:","nonFlexMaterials"],
+            ["UCP_Barstow_LeafSpring_RL_Block",["barstow_axle_R"]],
+            ["UCP_Barstow_LeafSpring_RL",["barstow_leaf_R"]]
+        ],
+        "rails":{"leaf_RL":{"links:":["axsl","lf3l"],"broken:":[],"looped":false,"capped":true}},
+        "slidenodes":[["id:","railName","attached","fixToRail","tolerance","spring","strength","capStrength"],["ax2l","leaf_RL",true,true,0,81000,"FLT_MAX","FLT_MAX"]],
+        "nodes":[
+            ["id","posX","posY","posZ"],
+            {"frictionCoef":0.5,"nodeMaterial":"|NM_METAL","selfCollision":true,"collision":true,"nodeWeight":3,"group":"barstow_leaf_R"},
+            ["lf1l",0.56,1.96,0.29],
+            {"nodeWeight":2,"group":"","collision":false},
+            ["lf3l",0.61,1.4,0.58]
+        ],
+        "beams":[
+            ["id1:","id2:"],
+            {"beamPrecompression":1,"beamType":"|NORMAL","beamLongBound":1,"beamShortBound":1,"beamSpring":12001000,"beamDamp":100,"beamDeform":29750,"beamStrength":170000},
+            ["axsl","rx1l"],
+            ["lf1l","axsl"],
+            {"beamSpring":2501000,"beamDamp":150},
+            ["lf3l","rx1l"],
+            ["lf3l","lf1l"],
+            {"beamSpring":0,"beamDamp":150},
+            ["lf3l","ax2"],
+            {"beamType":"|LBEAM","beamSpring":84000,"beamDamp":1000,"beamPrecompression":0.927},
+            ["ax2l","rx1l",{"id3:":"axsl"}],
+            ["ax2l","lf1l",{"id3:":"axsl"}],
+            {"beamPrecompression":1,"beamType":"|NORMAL","beamLongBound":1,"beamShortBound":1,"beamSpring":501000,"beamDamp":500,"beamDeform":21250,"beamStrength":191250},
+            ["rw1l","rx1r",{"breakGroup":"wheel_RL"}],
+            ["rw1l","lf1r",{"breakGroup":"wheel_RL"}],
+            {"beamPrecompression":1,"beamSpring":2501000,"beamDamp":250,"beamDeform":29750,"beamStrength":148750},
+            ["lf1l","rx2l"],
+            ["lf1l","rx2ll"],
+            {"beamDeform":12750,"beamStrength":63750,"beamSpring":0,"beamPrecompression":1,"beamType":"|NORMAL","beamLongBound":1,"beamShortBound":1}
+        ],
+        "triangles":[
+            ["id1:","id2:","id3:"],
+            {"triangleType":"NONCOLLIDABLE","dragCoef":0},
+            ["ax2l","rx1l","axsl"],
+            ["ax2l","axsl","lf1l"],
+            {"triangleType":"NORMALTYPE"}
+        ]
+    },
+    "UCP_Barstow_LeafSpring_RR":{
+        "information":{"authors":"Oaf","name":"Rear Right Leaf Spring (UCP)","value":75},
+        "slotType":"UCP_Barstow_LeafSpring_RR",
+        "flexbodies":[
+            ["mesh","[group]:","nonFlexMaterials"],
+            ["UCP_Barstow_LeafSpring_RR_Block",["barstow_axle_R"]],
+            ["UCP_Barstow_LeafSpring_RR",["barstow_leaf_R"]]
+        ],
+        "rails":{"leaf_RR":{"links:":["axsr","lf3r"],"broken:":[],"looped":false,"capped":true}},
+        "slidenodes":[["id:","railName","attached","fixToRail","tolerance","spring","strength","capStrength"],["ax2r","leaf_RR",true,true,0,81000,"FLT_MAX","FLT_MAX"]],
+        "nodes":[
+            ["id","posX","posY","posZ"],
+            {"frictionCoef":0.5,"nodeMaterial":"|NM_METAL","selfCollision":true,"collision":true,"nodeWeight":3,"group":"barstow_leaf_R"},
+            ["lf1r",-0.56,1.96,0.29],
+            {"nodeWeight":2,"group":"","collision":false},
+            ["lf3r",-0.61,1.4,0.58]
+        ],
+        "beams":[
+            ["id1:","id2:"],
+            {"beamPrecompression":1,"beamType":"|NORMAL","beamLongBound":1,"beamShortBound":1,"beamSpring":12001000,"beamDamp":100,"beamDeform":29750,"beamStrength":170000},
+            ["axsr","rx1r"],
+            ["lf1r","axsr"],
+            {"beamSpring":2501000,"beamDamp":150},
+            ["lf3r","rx1r"],
+            ["lf3r","lf1r"],
+            {"beamSpring":0,"beamDamp":150},
+            ["lf3r","ax2"],
+            {"beamType":"|LBEAM","beamSpring":84000,"beamDamp":1000,"beamPrecompression":0.927},
+            ["ax2r","rx1r",{"id3:":"axsr"}],
+            ["ax2r","lf1r",{"id3:":"axsr"}],
+            {"beamPrecompression":1,"beamType":"|NORMAL","beamLongBound":1,"beamShortBound":1,"beamSpring":501000,"beamDamp":500,"beamDeform":21250,"beamStrength":191250},
+            ["rw1r","rx1l",{"breakGroup":"wheel_RR"}],
+            ["rw1r","lf1l",{"breakGroup":"wheel_RR"}],
+            {"beamPrecompression":1,"beamSpring":2501000,"beamDamp":250,"beamDeform":29750,"beamStrength":148750},
+            ["lf1r","rx2r"],
+            ["lf1r","rx2rr"],
+            {"beamDeform":12750,"beamStrength":63750,"beamSpring":0,"beamPrecompression":1,"beamType":"|NORMAL","beamLongBound":1,"beamShortBound":1}
+        ],
+        "triangles":[
+            ["id1:","id2:","id3:"],
+            {"triangleType":"NONCOLLIDABLE","dragCoef":0},
+            ["rx1r","ax2r","axsr"],
+            ["axsr","ax2r","lf1r"],
+            {"triangleType":"NORMALTYPE"}
+        ]
+    },
+    "UCP_Barstow_LeafSpring_RL_HeavyDuty":{
+        "information":{"authors":"Oaf","name":"Heavy Duty Rear Left Leaf Spring (UCP)","value":100},
+        "slotType":"UCP_Barstow_LeafSpring_RL",
+        "flexbodies":[
+            ["mesh","[group]:","nonFlexMaterials"],
+            ["UCP_Barstow_LeafSpring_RL_Block",["barstow_axle_R"]],
+            ["UCP_Barstow_LeafSpring_RL",["barstow_leaf_R"]]
+        ],
+        "rails":{"leaf_RL":{"links:":["axsl","lf3l"],"broken:":[],"looped":false,"capped":true}},
+        "slidenodes":[["id:","railName","attached","fixToRail","tolerance","spring","strength","capStrength"],["ax2l","leaf_RL",true,true,0,111000,"FLT_MAX","FLT_MAX"]],
+        "nodes":[
+            ["id","posX","posY","posZ"],
+            {"frictionCoef":0.5,"nodeMaterial":"|NM_METAL","selfCollision":true,"collision":true,"nodeWeight":3,"group":"barstow_leaf_R"},
+            ["lf1l",0.56,1.96,0.29],
+            {"nodeWeight":2,"group":"","collision":false},
+            ["lf3l",0.61,1.4,0.58]
+        ],
+        "beams":[
+            ["id1:","id2:"],
+            {"beamPrecompression":1,"beamType":"|NORMAL","beamLongBound":1,"beamShortBound":1,"beamSpring":12001000,"beamDamp":100,"beamDeform":35700,"beamStrength":212500},
+            ["axsl","rx1l"],
+            ["lf1l","axsl"],
+            {"beamSpring":2501000,"beamDamp":150},
+            ["lf3l","rx1l"],
+            ["lf3l","lf1l"],
+            {"beamSpring":0,"beamDamp":150},
+            ["lf3l","ax2"],
+            {"beamType":"|LBEAM","beamSpring":95000,"beamDamp":1000,"beamPrecompression":0.936},
+            ["ax2l","rx1l",{"id3:":"axsl"}],
+            ["ax2l","lf1l",{"id3:":"axsl"}],
+            {"beamPrecompression":1,"beamType":"|NORMAL","beamLongBound":1,"beamShortBound":1,"beamSpring":701000,"beamDamp":500,"beamDeform":38250,"beamStrength":191250},
+            ["rw1l","rx1r",{"breakGroup":"wheel_RL"}],
+            ["rw1l","lf1r",{"breakGroup":"wheel_RL"}],
+            {"beamPrecompression":1,"beamSpring":2501000,"beamDamp":250,"beamDeform":41735,"beamStrength":208250},
+            ["lf1l","rx2l"],
+            ["lf1l","rx2ll"],
+            {"beamDeform":12750,"beamStrength":63750,"beamSpring":0,"beamPrecompression":1,"beamType":"|NORMAL","beamLongBound":1,"beamShortBound":1}
+        ],
+        "triangles":[
+            ["id1:","id2:","id3:"],
+            {"triangleType":"NONCOLLIDABLE","dragCoef":0},
+            ["ax2l","rx1l","axsl"],
+            ["ax2l","axsl","lf1l"],
+            {"triangleType":"NORMALTYPE"}
+        ]
+    },
+    "UCP_Barstow_LeafSpring_RR_HeavyDuty":{
+        "information":{"authors":"Oaf","name":"Heavy Duty Rear Right Leaf Spring (UCP)","value":100},
+        "slotType":"UCP_Barstow_LeafSpring_RR",
+        "flexbodies":[
+            ["mesh","[group]:","nonFlexMaterials"],
+            ["UCP_Barstow_LeafSpring_RR_Block",["barstow_axle_R"]],
+            ["UCP_Barstow_LeafSpring_RR",["barstow_leaf_R"]]
+        ],
+        "rails":{"leaf_RR":{"links:":["axsr","lf3r"],"broken:":[],"looped":false,"capped":true}},
+        "slidenodes":[["id:","railName","attached","fixToRail","tolerance","spring","strength","capStrength"],["ax2r","leaf_RR",true,true,0,111000,"FLT_MAX","FLT_MAX"]],
+        "nodes":[
+            ["id","posX","posY","posZ"],
+            {"frictionCoef":0.5,"nodeMaterial":"|NM_METAL","selfCollision":true,"collision":true,"nodeWeight":3,"group":"barstow_leaf_R"},
+            ["lf1r",-0.56,1.96,0.29],
+            {"nodeWeight":2,"group":"","collision":false},
+            ["lf3r",-0.61,1.4,0.58]
+        ],
+        "beams":[
+            ["id1:","id2:"],
+            {"beamPrecompression":1,"beamType":"|NORMAL","beamLongBound":1,"beamShortBound":1,"beamSpring":12001000,"beamDamp":100,"beamDeform":35700,"beamStrength":212500},
+            ["axsr","rx1r"],
+            ["lf1r","axsr"],
+            {"beamSpring":2501000,"beamDamp":150},
+            ["lf3r","rx1r"],
+            ["lf3r","lf1r"],
+            {"beamSpring":0,"beamDamp":150},
+            ["lf3r","ax2"],
+            {"beamType":"|LBEAM","beamSpring":95000,"beamDamp":1000,"beamPrecompression":0.936},
+            ["ax2r","rx1r",{"id3:":"axsr"}],
+            ["ax2r","lf1r",{"id3:":"axsr"}],
+            {"beamPrecompression":1,"beamType":"|NORMAL","beamLongBound":1,"beamShortBound":1,"beamSpring":701000,"beamDamp":500,"beamDeform":38250,"beamStrength":191250},
+            ["rw1r","rx1l",{"breakGroup":"wheel_RR"}],
+            ["rw1r","lf1l",{"breakGroup":"wheel_RR"}],
+            {"beamPrecompression":1,"beamSpring":2501000,"beamDamp":250,"beamDeform":41735,"beamStrength":208250},
+            ["lf1r","rx2r"],
+            ["lf1r","rx2rr"],
+            {"beamDeform":12750,"beamStrength":63750,"beamSpring":0,"beamPrecompression":1,"beamType":"|NORMAL","beamLongBound":1,"beamShortBound":1}
+        ],
+        "triangles":[
+            ["id1:","id2:","id3:"],
+            {"triangleType":"NONCOLLIDABLE","dragCoef":0},
+            ["rx1r","ax2r","axsr"],
+            ["axsr","ax2r","lf1r"],
+            {"triangleType":"NORMALTYPE"}
+        ]
+    }
+}
