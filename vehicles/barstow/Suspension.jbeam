@@ -170,6 +170,24 @@
             {"beamPrecompression":1,"beamType":"|NORMAL","beamLongBound":1,"beamShortBound":1}
         ]
     },
+    "UCP_Barstow_Shock_FL_Blown":{
+        "information":{
+            "authors":"Oaf",
+            "name":"Blown Front Left Shock (UCP)",
+            "value":10
+        },
+        "slotType":"UCP_Barstow_Shock_FL",
+        "flexbodies":[["mesh","[group]:","nonFlexMaterials"],["UCP_Barstow_Shock_FL",["barstow_shockbottom_F","barstow_shocktop_F","barstow_lowermounts_b_F","barstow_lowerarm_F"]]]
+    },
+    "UCP_Barstow_Shock_FR_Blown":{
+        "information":{
+            "authors":"Oaf",
+            "name":"Blown Front Right Shock (UCP)",
+            "value":10
+        },
+        "slotType":"UCP_Barstow_Shock_FR",
+        "flexbodies":[["mesh","[group]:","nonFlexMaterials"],["UCP_Barstow_Shock_FR",["barstow_shockbottom_F","barstow_shocktop_F","barstow_lowermounts_b_F","barstow_lowerarm_F"]]]
+    },
     "UCP_Barstow_Shock_FL_HeavyDuty":{
         "information":{
             "authors":"Oaf",

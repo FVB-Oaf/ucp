@@ -1012,5 +1012,30 @@
             ["e1r","e1l","e2l"],
             {"triangleType":"NORMALTYPE"}
         ]
+    },
+    "UCP_Barstow_I6Internals_Upgraded": {
+        "information":{
+            "authors":"BeamNG",
+            "name":"Upgraded Long Block (UCP)",
+            "value":200
+        },
+        "slotType":"barstow_engine_i6_internals",
+        "mainEngine":{
+            "torque":[
+                ["rpm","torque"],
+                [0,0],
+                [500,"$=160*1.5"],
+                [1000,"$=235*1.5"],
+                [1800,"$=281*1.5"],
+                [3000,"$=276*1.5"],
+                [4000,"$=248*1.5"],
+                [4500,"$=212*1.5"],
+                [5000,"$=155*1.5"],
+                [5500,"$=104*1.5"],
+                [6000,"$=89*1.5"],
+                [7000,"$=80*1.5"],
+                [8000,"$=70*1.5"]
+            ]
+        }
     }
 }
