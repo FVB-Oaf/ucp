@@ -1,0 +1,84 @@
+{
+    //combined interior value: 500
+    "UCP_Pigeon_Int":{
+        "information":{"authors":"Oaf","name":"Interior (UCP)","value":200},
+        "slotType":"UCP_Pigeon_Int",
+        "slots":[
+            ["type","default","description"],
+            ["pigeon_dashboard","pigeon_dashboard","Dashboard",{"coreSlot":true}],
+            ["pigeon_shifter","pigeon_shifter_M","Shifter"],
+            ["pigeon_seat_FR","pigeon_seat_FR","Driver Seat"],
+            ["pigeon_seat_FL","pigeon_seat_FL","Passenger Seat"],
+            ["pigeon_rollcage","","Roll Cage"],
+            ["pigeon_shiftlight","","Shift Light"],
+            ["gps","","Navigation Unit",{"nodeOffset":{"x":-0.01,"y":-0.375,"z":1.015}}],
+            ["UCP_Pigeon_RearViewMirror","UCP_Pigeon_RearViewMirror","Rear-View Mirror"],
+            ["UCP_Pigeon_GasPedal","UCP_Pigeon_GasPedal","Gas Pedal"],
+            ["UCP_Pigeon_BrakePedal","UCP_Pigeon_BrakePedal","Brake Pedal"],
+            ["UCP_Pigeon_ClutchPedal","UCP_Pigeon_ClutchPedal","Clutch Pedal"],
+            ["UCP_Pigeon_PBrake","UCP_Pigeon_PBrake","Parking Brake"],
+            ["UCP_Pigeon_Visor_L","UCP_Pigeon_Visor_L","Left Sunvisor"],
+            ["UCP_Pigeon_Visor_R","UCP_Pigeon_Visor_R","Right Sunvisor"]
+        ],
+        "flexbodies":[["mesh","[group]:","nonFlexMaterials"],["UCP_Pigeon_Int",["pigeon_body"]],["UCP_Pigeon_StorageCubby",["pigeon_footwell","pigeon_enginebump","pigeon_floor"]]]
+    },
+    "UCP_Pigeon_RearViewMirror":{
+        "information":{"authors":"Oaf","name":"Rear-View Mirror (UCP)","value":50},
+        "slotType":"UCP_Pigeon_RearViewMirror",
+        "flexbodies":[["mesh","[group]:","nonFlexMaterials"],["pigeon_intermirror",["pigeon_roof"]]],
+        "mirrors":[["mesh","idRef:","id1:","id2:"],["pigeon_intermirror","rf1","rf1r","rf2",{"refBaseTranslation":{"x":-0.01,"y":0.03,"z":-0.11},"baseRotationGlobal":{"x":13,"y":0,"z":-18}}]]
+    },
+    "UCP_Pigeon_GasPedal":{
+        "information":{"authors":"Oaf","name":"Gas Pedal (UCP)","value":50},
+        "slotType":"UCP_Pigeon_GasPedal",
+        "props":[
+            ["func","mesh","idRef:","idX:","idY:","baseRotation","rotation","translation","min","max","offset","multiplier"],
+            ["throttle","pigeon_pedal_gas","b1rr","b1r","b2rr",{"x":85,"y":7,"z":10},{"x":25,"y":0,"z":0},{"x":0.0,"y":0,"z":0},0,1,0,1]
+        ]
+    },
+    "UCP_Pigeon_BrakePedal":{
+        "information":{"authors":"Oaf","name":"Brake Pedal (UCP)","value":50},
+        "slotType":"UCP_Pigeon_BrakePedal",
+        "props":[
+            ["func","mesh","idRef:","idX:","idY:","baseRotation","rotation","translation","min","max","offset","multiplier"],
+            ["brake","pigeon_pedal_brake","b1rr","b1r","b2rr",{"x":85,"y":7,"z":10},{"x":25,"y":0,"z":0},{"x":0.0,"y":0,"z":0},0,1,0,1]
+        ]
+    },
+    "UCP_Pigeon_ClutchPedal":{
+        "information":{"authors":"Oaf","name":"Clutch Pedal (UCP)","value":50},
+        "slotType":"UCP_Pigeon_ClutchPedal",
+        "props":[
+            ["func","mesh","idRef:","idX:","idY:","baseRotation","rotation","translation","min","max","offset","multiplier"],
+            ["clutch","pigeon_pedal_clutch","b1rr","b1r","b2rr",{"x":85,"y":7,"z":10},{"x":25,"y":0,"z":0},{"x":0.0,"y":0,"z":0},0,1,0,1]
+        ]
+    },
+    "UCP_Pigeon_PBrake":{
+        "information":{"authors":"Oaf","name":"Parking Brake (UCP)","value":50},
+        "slotType":"UCP_Pigeon_PBrake",
+        "props":[
+            ["func","mesh","idRef:","idX:","idY:","baseRotation","rotation","translation","min","max","offset","multiplier"],
+            ["parkingbrake","pigeon_pbrake","b7","b7rr","b4",{"x":95,"y":180,"z":0},{"x":-25,"y":0,"z":0},{"x":0.0,"y":0,"z":0},0,1,0,1]
+        ],
+        "flexbodies":[["mesh","[group]:","nonFlexMaterials"],["UCP_Pigeon_PBrakeBracket",["pigeon_footwell","pigeon_enginebump","pigeon_floor"]]]
+    },
+    "UCP_Pigeon_Visor_L":{
+        "information":{"authors":"Oaf","name":"Left Sunvisor (UCP)","value":25},
+        "slotType":"UCP_Pigeon_Visor_L",
+        "flexbodies":[["mesh","[group]:","nonFlexMaterials"],["UCP_Pigeon_Visor_L",["pigeon_roof"]]]
+    },
+    "UCP_Pigeon_Visor_R":{
+        "information":{"authors":"Oaf","name":"Left Sunvisor (UCP)","value":25},
+        "slotType":"UCP_Pigeon_Visor_R",
+        "flexbodies":[["mesh","[group]:","nonFlexMaterials"],["UCP_Pigeon_Visor_R",["pigeon_roof"]]]
+    },
+    "UCP_Pigeon_DoorPanel_L":{
+        "information":{"authors":"Oaf","name":"Left Door Panel (UCP)","value":60},
+        "slotType":"UCP_Pigeon_DoorPanel_L",
+        "flexbodies":[["mesh","[group]:","nonFlexMaterials"],["UCP_Pigeon_DoorPanel_L",["pigeon_door_L"]]]
+    },
+    "UCP_Pigeon_DoorPanel_R":{
+        "information":{"authors":"Oaf","name":"Right Door Panel (UCP)","value":60},
+        "slotType":"UCP_Pigeon_DoorPanel_R",
+        "flexbodies":[["mesh","[group]:","nonFlexMaterials"],["UCP_Pigeon_DoorPanel_R",["pigeon_door_R"]]]
+    }
+}

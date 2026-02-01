@@ -1,0 +1,150 @@
+{   
+    "UCP_Pigeon_Windshield":{
+        "information":{"authors":"Oaf","name":"Windshield (UCP)","value":0},
+        "slotType":"pigeon_windshield",
+        "slots":[
+            ["type","default","description"],
+            ["UCP_Pigeon_WindshieldGlass","UCP_Pigeon_WindshieldGlass","Windshield Glass"],
+            ["UCP_Pigeon_Wiper","UCP_Pigeon_Wiper","Windshield Wiper"]
+        ]
+    },
+    "UCP_Pigeon_Wiper":{
+        "information":{"authors":"Oaf","name":"Windshield Wiper","value":50},
+        "slotType":"UCP_Pigeon_Wiper",
+        "flexbodies":[["mesh","[group]:","nonFlexMaterials"],["pigeon_wiper",["pigeon_windshield"]]]
+    },
+    "UCP_Pigeon_WindshieldGlass": {
+        "information":{"authors":"Oaf","name":"Windshield Glass (UCP)","value":250},
+        "slotType":"UCP_Pigeon_WindshieldGlass",
+        "flexbodies":[
+            ["mesh","[group]:","nonFlexMaterials"],
+            {"deformGroup":"windshield_break","deformMaterialBase":"pigeon_glass","deformMaterialDamaged":"pigeon_windshield_dmg"},
+            ["pigeon_windshield",["pigeon_windshield"],[],{"deformSound":"event:>Destruction>Vehicle>Glass>impact_glass_windscreen_01","deformVolume":0.7}],
+            {"deformGroup":"windshield_break","deformMaterialBase":"pigeon_glass_int","deformMaterialDamaged":"pigeon_glass_int"},
+            ["pigeon_windshield_int",["pigeon_windshield"]],
+            {"deformGroup":"windshield_break","deformMaterialBase":"glass_invisible","deformMaterialDamaged":"glass_cracks"},
+            ["pigeon_windshield_dmg",["pigeon_windshield"]],
+            {"deformGroup":""}
+        ],
+        "sounds":{"$+cabinFilterCoef":0.12},
+        "nodes":[
+            ["id","posX","posY","posZ"],
+            {"selfCollision":true,"collision":true,"frictionCoef":0.5,"nodeMaterial":"|NM_GLASS","group":["pigeon_windshield","gps"],"nodeWeight":0.3},
+            ["wi1",0,-0.44,1.19],
+            {"nodeMaterial":"|NM_PLASTIC","nodeWeight":0.45},
+            ["p2r",-0.549,-0.421,1.181,{"group":["pigeon_body","gps","pigeon_windshield"]}],
+            ["p2l",0.549,-0.421,1.181,{"group":["pigeon_body","gps","pigeon_windshield"]}],
+            {"nodeWeight":0.45},
+            ["rf1r",-0.483,-0.216,1.45,{"group":["pigeon_roof","pigeon_body","gps","pigeon_windshield"]}],
+            ["rf1",0,-0.232,1.472,{"nodeWeight":0.3,"group":["pigeon_roof","pigeon_body","gps","pigeon_windshield"]}],
+            ["rf1l",0.483,-0.216,1.45,{"group":["pigeon_roof","pigeon_body","gps","pigeon_windshield"]}],
+            {"nodeWeight":0.75,"group":["gps","pigeon_windshield","pigeon_dash","pigeon_body"]},
+            ["b6rr",-0.611,-0.6,0.912],
+            ["b6r",-0.244,-0.622,0.925],
+            ["b6l",0.244,-0.622,0.925],
+            ["b6ll",0.611,-0.6,0.912,{"group":["gps","pigeon_windshield","pigeon_body"]}],
+            {"group":""}
+        ],
+        "beams": [
+            ["id1:","id2:"],
+            {"beamPrecompression":1,"beamType":"|NORMAL","beamLongBound":1,"beamShortBound":1,"disableMeshBreaking":true,"disableTriangleBreaking":true,"beamSpring":241000,"beamDamp":40,"beamDeform":1500,"beamStrength":"FLT_MAX","deformLimitExpansion":"","deformGroup":"windshield_break","deformationTriggerRatio":0.03},
+            ["wi1","rf1"],
+            ["p1r","wi1"],
+            ["p1l","wi1"],
+            ["wi1","b6r"],
+            ["wi1","b6l"],
+            ["wi1","rf2"],
+            ["rf1r","wi1"],
+            ["rf1l","wi1"],
+            ["wi1","b6rr"],
+            ["wi1","b6ll"],
+            {"beamDeform":1000,"beamStrength":1000},
+            ["p1r","p1l"],
+            ["rf1r","b6r"],
+            ["rf1l","b6l"],
+            ["rf1","b6r"],
+            ["rf1","b6l"],
+            {"breakGroup":"","deformGroup":"","deformationTriggerRatio":"","disableMeshBreaking":false,"disableTriangleBreaking":false,"deformLimitExpansion":1.2,"beamPrecompression":1,"beamType":"|NORMAL","beamLongBound":1.0,"beamShortBound":1.0}
+        ],
+        "triangles":[
+            ["id1:","id2:","id3:"],
+            {"groundModel":"glass","dragCoef":2.8,"group":"pigeon_windshield"},
+            ["p1r","b6r","b6l"],
+            ["p1l","p1r","b6l"],
+            ["rf1","p1r","p1l"],
+            {"group":""}
+        ]
+    },
+    "UCP_Pigeon_BrokenWindshieldGlass": {
+        "information":{"authors":"Oaf","name":"Smashed Windshield Glass (UCP)","value":25},
+        "slotType":"UCP_Pigeon_WindshieldGlass",
+        "flexbodies":[
+            ["mesh","[group]:","nonFlexMaterials"],
+            ["pigeon_windshield_int",["pigeon_windshield"]],
+            ["UCP_Pigeon_BrokenWindshield",["pigeon_windshield"]],
+            ["UCP_Pigeon_BrokenWindshield2",["pigeon_windshield"]]
+        ],
+        "nodes":[
+            ["id","posX","posY","posZ"],
+            {"selfCollision":true,"collision":true,"frictionCoef":0.5,"nodeMaterial":"|NM_GLASS","group":["pigeon_windshield","gps"],"nodeWeight":0.3},
+            ["wi1",0,-0.44,1.19],
+            {"nodeMaterial":"|NM_PLASTIC","nodeWeight":0.45},
+            ["p2r",-0.549,-0.421,1.181,{"group":["pigeon_body","gps","pigeon_windshield"]}],
+            ["p2l",0.549,-0.421,1.181,{"group":["pigeon_body","gps","pigeon_windshield"]}],
+            {"nodeWeight":0.45},
+            ["rf1r",-0.483,-0.216,1.45,{"group":["pigeon_roof","pigeon_body","gps","pigeon_windshield"]}],
+            ["rf1",0,-0.232,1.472,{"nodeWeight":0.3,"group":["pigeon_roof","pigeon_body","gps","pigeon_windshield"]}],
+            ["rf1l",0.483,-0.216,1.45,{"group":["pigeon_roof","pigeon_body","gps","pigeon_windshield"]}],
+            {"nodeWeight":0.75,"group":["gps","pigeon_windshield","pigeon_dash","pigeon_body"]},
+            ["b6rr",-0.611,-0.6,0.912],
+            ["b6r",-0.244,-0.622,0.925],
+            ["b6l",0.244,-0.622,0.925],
+            ["b6ll",0.611,-0.6,0.912,{"group":["gps","pigeon_windshield","pigeon_body"]}],
+            {"group":""}
+        ],
+        "beams": [
+            ["id1:","id2:"],
+            {"beamPrecompression":1,"beamType":"|NORMAL","beamLongBound":1,"beamShortBound":1,"disableMeshBreaking":true,"disableTriangleBreaking":true,"beamSpring":241000,"beamDamp":40,"beamDeform":1500,"beamStrength":"FLT_MAX","deformLimitExpansion":"","deformGroup":"windshield_break","deformationTriggerRatio":0.03},
+            ["wi1","rf1"],
+            ["p1r","wi1"],
+            ["p1l","wi1"],
+            ["wi1","b6r"],
+            ["wi1","b6l"],
+            ["wi1","rf2"],
+            ["rf1r","wi1"],
+            ["rf1l","wi1"],
+            ["wi1","b6rr"],
+            ["wi1","b6ll"],
+            {"beamDeform":1000,"beamStrength":1000},
+            ["p1r","p1l"],
+            ["rf1r","b6r"],
+            ["rf1l","b6l"],
+            ["rf1","b6r"],
+            ["rf1","b6l"],
+            {"breakGroup":"","deformGroup":"","deformationTriggerRatio":"","disableMeshBreaking":false,"disableTriangleBreaking":false,"deformLimitExpansion":1.2,"beamPrecompression":1,"beamType":"|NORMAL","beamLongBound":1.0,"beamShortBound":1.0}
+        ],
+        "triangles":[
+            ["id1:","id2:","id3:"],
+            {"groundModel":"glass","dragCoef":2.8,"group":"pigeon_windshield"},
+            ["p1r","b6r","b6l"],
+            ["p1l","p1r","b6l"],
+            ["rf1","p1r","p1l"],
+            {"group":""}
+        ]
+    },
+    "UCP_Pigeon_BrokenBacklight":{
+        "information":{"authors":"Oaf","name":"Broken Backlight (UCP)","value":15},
+        "slotType":"pigeon_backlight",
+        "flexbodies":[["mesh","[group]:","nonFlexMaterials"],["UCP_Pigeon_BrokenBacklight",["pigeon_body","pigeon_roof"]],["UCP_Pigeon_BrokenBacklight2",["pigeon_body","pigeon_roof"]]]
+    },
+    "UCP_Pigeon_BrokenRightDoorGlass":{
+        "information":{"authors":"Oaf","name":"Broken Right Door Glass (UCP)","value":15},
+        "slotType":"pigeon_doorglass_R",
+        "flexbodies":[["mesh","[group]:","nonFlexMaterials"],["UCP_Pigeon_BrokenRightDoorGlass",["pigeon_door_R"]],["UCP_Pigeon_BrokenRightDoorGlass2",["pigeon_door_R"]]]
+    },
+    "UCP_Pigeon_BrokenLeftDoorGlass":{
+        "information":{"authors":"Oaf","name":"Broken Left Door Glass (UCP)","value":15},
+        "slotType":"pigeon_doorglass_L",
+        "flexbodies":[["mesh","[group]:","nonFlexMaterials"],["UCP_Pigeon_BrokenLeftDoorGlass",["pigeon_door_L"]],["UCP_Pigeon_BrokenLeftDoorGlass2",["pigeon_door_L"]]]
+    }
+}
