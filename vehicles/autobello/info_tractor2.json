@@ -1,0 +1,29 @@
+{
+  "BoundingBox":[
+    [
+      -0.795,
+      -2.02,
+      -0.445139
+    ],
+    [
+      1.095,
+      2.038,
+      1.597
+    ]
+  ],
+  "Braking G":0.867,
+  "Config Type":"Custom",
+  "Configuration":"Tractor (M)",
+  "Description":"A home-made tractor.",
+  "Drivetrain":"RWD",
+  "Fuel Type":"Gasoline",
+  "Induction Type":"NA",
+  "Off-Road Score":46,
+  "Propulsion":"ICE",
+  "TorquePeakRPM":"2850 - 4400",
+  "Transmission":"Manual",
+  "Years":{
+    "max":1963,
+    "min":1957
+  }
+}
